@@ -19,13 +19,13 @@ This is main CSS file that contains custom style rules used in this template
 /** Base Styles
 --------------------------------------------------------------*/
 :root {
-  --accent-color: #94CA21;
+  --accent-color: #ff7f00;
   --secondary-color: #79A6DE;
   --dark-color: #222222;
   --white-color: #FFFFFF;
   --body-text-color: #414141;
   --light-text-color: #686868;
-  --link-color: #94CA21;
+  --link-color: #ff7f00;
   --background-color: #F9F9F9;
 }
 
@@ -400,7 +400,7 @@ iconify-icon.search-icons {
 .bullet {
   z-index: 1;
   position: v absolute;
-  background: #D3EB9F;
+  background: #ff7f00;
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -409,7 +409,7 @@ iconify-icon.search-icons {
 
 .bullet:hover {
   background: var(--accent-color);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 12px #D3EB9F;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 12px #ff7f00;
   border-radius: 15px;
 }
 
@@ -525,7 +525,7 @@ section#testimonial {
 
 /*---- pricing section style start ----*/
 .pricing-lable {
-  background: #EDF3E0;
+  background: #fddebf;
   border-radius: 10px;
   overflow: hidden;
   height: 580px;
@@ -533,7 +533,7 @@ section#testimonial {
 
 
 iconify-icon.pricing-lable-icon {
-  color: #E2EEC9;
+  color: #ff7f00;
   font-size: 400px;
 }
 
@@ -563,7 +563,7 @@ label#yearly-label {
 /* switch button style */
 .form-switch .form-check-input {
   width: 4em;
-  background-color: #D3EB9F;
+  background-color: #ff7f00;
 
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
@@ -573,22 +573,22 @@ label#yearly-label {
 }
 
 .form-check-input:focus {
-  border-color: #D3EB9F;
+  border-color: #ff7f00;
   box-shadow: none;
 }
 
 .form-check-input:checked {
-  background-color: #D3EB9F;
-  border-color: #D3EB9F;
+  background-color: #ff7f00;
+  border-color: #ff7f00;
 }
 
 .form-check-input {
-  border: var(--bs-border-width) solid #D3EB9F;
+  border: var(--bs-border-width) solid #ff7f00;
 }
 
 .form-switch .form-check-input:focus {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-  background-color: #D3EB9F;
+  background-color: #ff7f00;
 
 }
 
