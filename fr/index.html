@@ -1,1099 +1,1416 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoCarTunisia</title>
 
     <!--vendor css ================================================== -->
-    <link rel="stylesheet" type="text/css" href="../css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../css/vendor.css" />
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!--Bootstrap ================================================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
 
     <!-- Style Sheet ================================================== -->
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
 
     <!-- Google Fonts ================================================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet" />
 
     <!-- script ================================================== -->
     <script src="../js/modernizr.js"></script>
+  </head>
 
-</head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+    <nav
+      class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="../images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="#"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#rental">Voitures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#pricing">prix</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#action">Contact</a>
+              </li>
+            </ul>
 
-<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
-
-    <nav class="navbar navbar-expand-lg  navbar-light container-fluid py-3 position-fixed ">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active px-3" aria-current="page" href="#">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#rental">Voitures</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#pricing">prix</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#blog">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#action">Contact</a>
-                        </li>
-                        
-                    </ul>
-
-                    <div class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center ">
-                        <ul class="navbar-nav justify-content-end align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    se connecter </a>
-                            </li>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="tabs-listing">
-                                                <nav>
-                                                    <div class="nav nav-tabs d-flex justify-content-center border-0"
-                                                        id="nav-tab" role="tablist">
-                                                        <button
-                                                            class="btn btn-outline-primary text-uppercase me-3 active"
-                                                            id="nav-sign-in-tab" data-bs-toggle="tab"
-                                                            data-bs-target="#nav-sign-in" type="button" role="tab"
-                                                            aria-controls="nav-sign-in" aria-selected="true">se connecter</button>
-                                                        <button class="btn btn-outline-primary text-uppercase"
-                                                            id="nav-register-tab" data-bs-toggle="tab"
-                                                            data-bs-target="#nav-register" type="button" role="tab"
-                                                            aria-controls="nav-register" aria-selected="false">S’enregistrer
-</button>
-                                                    </div>
-                                                </nav>
-                                                <div class="tab-content" id="nav-tabContent">
-                                                    <div class="tab-pane fade active show" id="nav-sign-in"
-                                                        role="tabpanel" aria-labelledby="nav-sign-in-tab">
-                                                        <form id="form1" class="form-group flex-wrap p-3 ">
-                                                            <div class="form-input col-lg-12 my-4">
-                                                                <label for="exampleInputEmail1"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Votre Adresse E-mail</label>
-                                                                <input type="text" id="exampleInputEmail1" name="email"
-                                                                    placeholder="Email" class="form-control ps-3">
-                                                            </div>
-                                                            <div class="form-input col-lg-12 my-4">
-                                                                <label for="inputPassword1"
-                                                                    class="form-label  fs-6 text-uppercase fw-bold text-black">Votre Mot de Passe</label>
-                                                                <input type="password" id="inputPassword1"
-                                                                    placeholder="Mot de passe" class="form-control ps-3"
-                                                                    aria-describedby="passwordHelpBlock">
-                                                                <div id="passwordHelpBlock"
-                                                                    class="form-text text-center">
-                                                                    <a href="#" class=" password">Mot de passe oublié ?</a>
-                                                                </div>
-
-                                                            </div>
-                                                            <label class="py-3">
-                                                                <input type="checkbox" required="" class="d-inline">
-                                                                <span class="label-body text-black">Se souvenir de moi</span>
-                                                            </label>
-                                                            <div class="d-grid my-3">
-                                                                <button
-                                                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Se connecter</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="nav-register" role="tabpanel"
-                                                        aria-labelledby="nav-register-tab">
-                                                        <form id="form2" class="form-group flex-wrap p-3 ">
-                                                            <div class="form-input col-lg-12 my-4">
-                                                                <label for="exampleInputEmail2"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Adresse Email
-                                                                    </label>
-                                                                <input type="text" id="exampleInputEmail2" name="email"
-                                                                    placeholder="Email" class="form-control ps-3">
-                                                            </div>
-                                                            <div class="form-input col-lg-12 my-4">
-                                                                <label for="inputPassword2"
-                                                                    class="form-label  fs-6 text-uppercase fw-bold text-black">Mot de passe</label>
-                                                                <input type="password" id="inputPassword2"
-                                                                    placeholder="Mot de passe" class="form-control ps-3"
-                                                                    aria-describedby="passwordHelpBlock">
-                                                            </div>
-                                                            <label class="py-3">
-                                                                <input type="checkbox" required="" class="d-inline">
-                                                                <span class="label-body text-black">J'accepte la <a
-                                                                        href="#"
-                                                                        class="text-black password border-bottom">Politique de confidentialité</a>
-                                                                </span>
-                                                            </label>
-                                                            <div class="d-grid my-3">
-                                                                <button
-                                                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">S'enregistrer</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            <div
+              class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center">
+              <ul class="navbar-nav justify-content-end align-items-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link px-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    se connecter
+                  </a>
+                </li>
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist">
+                              <button
+                                class="btn btn-outline-primary text-uppercase me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true">
+                                se connecter
+                              </button>
+                              <button
+                                class="btn btn-outline-primary text-uppercase"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false">
+                                S’enregistrer
+                              </button>
                             </div>
-                        </ul>
-                        <button type="button" class="btn btn-outline-primary nav-button mx-3" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal2"> S'enregistrer </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="tabs-listing">
-                                            <nav>
-                                                <div class="nav nav-tabs d-flex justify-content-center border-0"
-                                                    id="nav-tab2" role="tablist">
-                                                    <button class="btn btn-outline-primary text-uppercase me-4 "
-                                                        id="nav-sign-in-tab2" data-bs-toggle="tab"
-                                                        data-bs-target="#nav-sign-in2" type="button" role="tab"
-                                                        aria-controls="nav-sign-in2" aria-selected="false">Se Connecter</button>
-                                                    <button class="btn btn-outline-primary text-uppercase active"
-                                                        id="nav-register-tab2" data-bs-toggle="tab"
-                                                        data-bs-target="#nav-register2" type="button" role="tab"
-                                                        aria-controls="nav-register2" aria-selected="true">S'enregistrer</button>
-                                                </div>
-                                            </nav>
-                                            <div class="tab-content" id="nav-tabContent1">
-                                                <div class="tab-pane fade " id="nav-sign-in2" role="tabpanel"
-                                                    aria-labelledby="nav-sign-in-tab2">
-                                                    <form id="form3" class="form-group flex-wrap p-3 ">
-                                                        <div class="form-input col-lg-12 my-4">
-                                                            <label for="exampleInputEmail3"
-                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse Email
-                                                                </label>
-                                                            <input type="text" id="exampleInputEmail3" name="email"
-                                                                placeholder="Email" class="form-control ps-3">
-                                                        </div>
-                                                        <div class="form-input col-lg-12 my-4">
-                                                            <label for="inputPassword3"
-                                                                class="form-label  fs-6 text-uppercase fw-bold text-black">Mot de Passe</label>
-                                                            <input type="password" id="inputPassword3"
-                                                                placeholder="Mot de passe" class="form-control ps-3"
-                                                                aria-describedby="passwordHelpBlock">
-                                                            <div id="passwordHelpBlock2" class="form-text text-center">
-                                                                <a href="#" class=" password">Mot de passe oublié ?</a>
-                                                            </div>
-
-                                                        </div>
-                                                        <label class="py-3">
-                                                            <input type="checkbox" required="" class="d-inline">
-                                                            <span class="label-body text-black">Se souvenir de moi</span>
-                                                        </label>
-                                                        <div class="d-grid my-3">
-                                                            <button
-                                                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Se Connecter</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="tab-pane fade active show" id="nav-register2"
-                                                    role="tabpanel" aria-labelledby="nav-register-tab2">
-                                                    <form id="form4" class="form-group flex-wrap p-3 ">
-                                                        <div class="form-input col-lg-12 my-4">
-                                                            <label for="exampleInputEmail4"
-                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse Email
-                                                                </label>
-                                                            <input type="text" id="exampleInputEmail4" name="email"
-                                                                placeholder="Email" class="form-control ps-3">
-                                                        </div>
-                                                        <div class="form-input col-lg-12 my-4">
-                                                            <label for="inputPassword4"
-                                                                class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
-                                                            <input type="password" id="inputPassword4"
-                                                                placeholder="Mot de passe" class="form-control ps-3"
-                                                                aria-describedby="passwordHelpBlock">
-                                                        </div>
-                                                        <label class="py-3">
-                                                            <input type="checkbox" required="" class="d-inline">
-                                                            <span class="label-body text-black">J'accepte la <a
-                                                                    href="#"
-                                                                    class="text-black password border-bottom">Politique de confidentalité</a>
-                                                            </span>
-                                                        </label>
-                                                        <div class="d-grid my-3">
-                                                            <button
-                                                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">S'enregistrer</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab">
+                              <form id="form1" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Votre Adresse E-mail</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail1"
+                                    name="email"
+                                    placeholder="Email"
+                                    class="form-control ps-3" />
                                 </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Votre Mot de Passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword1"
+                                    placeholder="Mot de passe"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock" />
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center">
+                                    <a href="#" class="password"
+                                      >Mot de passe oublié ?</a
+                                    >
+                                  </div>
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline" />
+                                  <span class="label-body text-black"
+                                    >Se souvenir de moi</span
+                                  >
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                    Se connecter
+                                  </button>
+                                </div>
+                              </form>
                             </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab">
+                              <form id="form2" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Adresse Email
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail2"
+                                    name="email"
+                                    placeholder="Email"
+                                    class="form-control ps-3" />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Mot de passe</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword2"
+                                    placeholder="Mot de passe"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock" />
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline" />
+                                  <span class="label-body text-black"
+                                    >J'accepte la
+                                    <a
+                                      href="#"
+                                      class="text-black password border-bottom"
+                                      >Politique de confidentialité</a
+                                    >
+                                  </span>
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                    S'enregistrer
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </ul>
+              <button
+                type="button"
+                class="btn btn-outline-primary nav-button mx-3"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2">
+                S'enregistrer
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab2"
+                            role="tablist">
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-4"
+                              id="nav-sign-in-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in2"
+                              aria-selected="false">
+                              Se Connecter
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase active"
+                              id="nav-register-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register2"
+                              aria-selected="true">
+                              S'enregistrer
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div
+                            class="tab-pane fade"
+                            id="nav-sign-in2"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2">
+                            <form id="form3" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Addresse Email
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail3"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3" />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Mot de Passe</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword3"
+                                  placeholder="Mot de passe"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock" />
+                                <div
+                                  id="passwordHelpBlock2"
+                                  class="form-text text-center">
+                                  <a href="#" class="password"
+                                    >Mot de passe oublié ?</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline" />
+                                <span class="label-body text-black"
+                                  >Se souvenir de moi</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                  Se Connecter
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-register2"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab2">
+                            <form id="form4" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Addresse Email
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail4"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3" />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword4"
+                                  placeholder="Mot de passe"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock" />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline" />
+                                <span class="label-body text-black"
+                                  >J'accepte la
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >Politique de confidentalité</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                  S'enregistrer
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- hero section start  -->
-    <section id="hero" class=" position-relative overflow-hidden">
-        <div class="pattern-overlay pattern-right position-absolute">
-            <img src="../images/hero-pattern-right.png" alt="pattern">
+    <section id="hero" class="position-relative overflow-hidden">
+      <div class="pattern-overlay pattern-right position-absolute">
+        <img src="../images/hero-pattern-right.png" alt="pattern" />
+      </div>
+      <div class="pattern-overlay pattern-left position-absolute">
+        <img src="../images/hero-pattern-left.png" alt="pattern" />
+      </div>
+      <div class="hero-content container text-center">
+        <div class="row">
+          <div class="detail mb-4">
+            <h1 class="">
+              Trouvez votre
+              <span class="text-primary"> voiture de location </span>
+            </h1>
+            <p class="hero-paragraph">
+              Nous avons de nombreuses collections de voitures de location.
+            </p>
+          </div>
         </div>
-        <div class="pattern-overlay pattern-left position-absolute">
-            <img src="../images/hero-pattern-left.png" alt="pattern">
-        </div>
-        <div class="hero-content container text-center">
-            <div class="row">
-                <div class="detail mb-4">
-                    <h1 class="">Trouvez votre <span class="text-primary"> voiture de location </span> </h1>
-                    <p class="hero-paragraph">Nous avons de nombreuses collections de voitures de location.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- search section start  -->
     <section id="search">
-        <div class="container search-block p-5">
-
-            <form class="row">
-                <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="vehicle" class="label-style text-capitalize form-label">Type de véhicule</label>
-                    <div class="input-group date ">
-                        <!-- <input type="text" class="form-control p-3 " id="vehicle" placeholder="Select Car Group" /> -->
-                        <select class="form-select form-control p-3" id="vehicle" aria-label="Default select example"
-                            style="background-image: none;">
-                            <option selected>Sélectionnez le type de véhicule</option>
-                            <option value="1">Seat Leon TSI 2020</option>
-                            <option value="2">Skoda Fabia 2024</option>
-                            <option value="3">Suzuki Swift 2024</option>
-                            <option value="4">Suzuki Celerio 2022</option>
-                            <option value="5">Skoda Fabia 2022</option>
-                            <option value="6">Hyundai I20 BVA 2024</option>
-                            <option value="7">Hyundai Grand I10 2024</option>
-                        </select>
-                        <span class="search-icon-position position-absolute p-3 ">
-                            <iconify-icon class="search-icons" icon="solar:bus-outline"></iconify-icon>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="location" class="label-style text-capitalize form-label">Lieu de prise en charge</label>
-                    <div class="input-group date">
-                        <input type="text" class="form-control p-3 position-relative" id="location"
-                            placeholder="Aéroport ou n’importe où" />
-                        <span class="search-icon-position position-absolute p-3 ">
-                            <iconify-icon class="search-icons" icon="solar:map-arrow-square-outline"></iconify-icon>
-                        </span>
-
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="pick-up-date" class="label-style text-capitalize form-label">Date de prise en charge</label>
-                    <div class="input-group date" id="datepicker1">
-                        <input type="text" class="form-control p-3" id="pick-up-date" />
-
-                        <span class="input-group-append">
-                            <span class="search-icon-position position-absolute p-3">
-                                <iconify-icon class="search-icons" icon="solar:calendar-broken"></iconify-icon>
-                            </span>
-                        </span>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="return-date" class="label-style text-capitalize form-label">Date de retour</label>
-                    <div class="input-group date" id="datepicker2">
-                        <input type="text" class="form-control p-3" id="return-date" />
-
-                        <span class="input-group-append">
-                            <span class="search-icon-position position-absolute p-3">
-                                <iconify-icon class="search-icons" icon="solar:calendar-broken"></iconify-icon>
-                            </span>
-                        </span>
-
-                    </div>
-                </div>
-            </form>
-
-            <div class="d-grid gap-2 mt-4">
-                <button class="btn btn-primary " type="button">Trouvez votre voiture</button>
+      <div class="container search-block p-5">
+        <form class="row">
+          <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+            <label for="vehicle" class="label-style text-capitalize form-label"
+              >Type de véhicule</label
+            >
+            <div class="input-group date">
+              <!-- <input type="text" class="form-control p-3 " id="vehicle" placeholder="Select Car Group" /> -->
+              <select
+                class="form-select form-control p-3"
+                id="vehicle"
+                aria-label="Default select example"
+                style="background-image: none">
+                <option selected>Sélectionnez le type de véhicule</option>
+                <option value="1">Seat Leon TSI 2020</option>
+                <option value="2">Skoda Fabia 2024</option>
+                <option value="3">Suzuki Swift 2024</option>
+                <option value="4">Suzuki Celerio 2022</option>
+                <option value="5">Skoda Fabia 2022</option>
+                <option value="6">Hyundai I20 BVA 2024</option>
+                <option value="7">Hyundai Grand I10 2024</option>
+              </select>
+              <span class="search-icon-position position-absolute p-3">
+                <iconify-icon
+                  class="search-icons"
+                  icon="solar:bus-outline"></iconify-icon>
+              </span>
             </div>
-        </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+            <label for="location" class="label-style text-capitalize form-label"
+              >Lieu de prise en charge</label
+            >
+            <div class="input-group date">
+              <input
+                type="text"
+                class="form-control p-3 position-relative"
+                id="location"
+                placeholder="Aéroport ou n’importe où" />
+              <span class="search-icon-position position-absolute p-3">
+                <iconify-icon
+                  class="search-icons"
+                  icon="solar:map-arrow-square-outline"></iconify-icon>
+              </span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+            <label
+              for="pick-up-date"
+              class="label-style text-capitalize form-label"
+              >Date de prise en charge</label
+            >
+            <div class="input-group date" id="datepicker1">
+              <input type="text" class="form-control p-3" id="pick-up-date" />
 
+              <span class="input-group-append">
+                <span class="search-icon-position position-absolute p-3">
+                  <iconify-icon
+                    class="search-icons"
+                    icon="solar:calendar-broken"></iconify-icon>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+            <label
+              for="return-date"
+              class="label-style text-capitalize form-label"
+              >Date de retour</label
+            >
+            <div class="input-group date" id="datepicker2">
+              <input type="text" class="form-control p-3" id="return-date" />
+
+              <span class="input-group-append">
+                <span class="search-icon-position position-absolute p-3">
+                  <iconify-icon
+                    class="search-icons"
+                    icon="solar:calendar-broken"></iconify-icon>
+                </span>
+              </span>
+            </div>
+          </div>
+        </form>
+
+        <div class="d-grid gap-2 mt-4">
+          <button class="btn btn-primary" type="button">
+            Trouvez votre voiture
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- process section start  -->
     <section id="process">
-        <div class=" process-content container">
-            <h2 class=" text-center my-5 pb-5">Notre processus <span class="text-primary"> de location </span> </h2>
-            <hr class="progress-line">
-            <div class="row process-block">
-                <div class="col-6 col-lg-3 text-start my-4">
-                    <div class="bullet"></div>
-                    <h5 class="text-uppercase mt-5"> Choisissez un véhicule</h5>
-                    <p>Choisissez une parmi nos voitures disponibles..</p>
-                </div>
+      <div class="process-content container">
+        <h2 class="text-center my-5 pb-5">
+          Notre processus <span class="text-primary"> de location </span>
+        </h2>
+        <hr class="progress-line" />
+        <div class="row process-block">
+          <div class="col-6 col-lg-3 text-start my-4">
+            <div class="bullet"></div>
+            <h5 class="text-uppercase mt-5">Choisissez un véhicule</h5>
+            <p>Choisissez une parmi nos voitures disponibles..</p>
+          </div>
 
-                <div class="col-6 col-lg-3 text-start my-4">
-                    <div class="bullet"></div>
-                    <h5 class="text-uppercase mt-5"> CHOISIR LE LIEU ET LA DATE </h5>
-                    <p>Choisissez le lieu de réception et la date disponible.</p>
-                </div>
+          <div class="col-6 col-lg-3 text-start my-4">
+            <div class="bullet"></div>
+            <h5 class="text-uppercase mt-5">CHOISIR LE LIEU ET LA DATE</h5>
+            <p>Choisissez le lieu de réception et la date disponible.</p>
+          </div>
 
-                <div class="col-6 col-lg-3 text-start my-4">
-                    <div class="bullet"></div>
-                    <h5 class="text-uppercase mt-5"> Réservez votre voiture </h5>
-                    <p>Faites-vite nous avons une forte demande.</p>
-                </div>
+          <div class="col-6 col-lg-3 text-start my-4">
+            <div class="bullet"></div>
+            <h5 class="text-uppercase mt-5">Réservez votre voiture</h5>
+            <p>Faites-vite nous avons une forte demande.</p>
+          </div>
 
-                <div class="col-6 col-lg-3 text-start my-4">
-                    <div class="bullet"></div>
-                    <h5 class="text-uppercase mt-5"> Fin de processus </h5>
-                    <p>Choisissez un mode de paiement : par virement ou carte bancaire.</p>
-                </div>
-
-            </div>
-
-
+          <div class="col-6 col-lg-3 text-start my-4">
+            <div class="bullet"></div>
+            <h5 class="text-uppercase mt-5">Fin de processus</h5>
+            <p>
+              Choisissez un mode de paiement : par virement ou carte bancaire.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- rental section start  -->
     <section id="rental" class="position-relative">
-        <div class="container my-5 py-5">
-            <h2 class=" text-center my-5">Voitures pour <span class="text-primary"> location </span> </h2>
+      <div class="container my-5 py-5">
+        <h2 class="text-center my-5">
+          Voitures pour <span class="text-primary"> location </span>
+        </h2>
 
-            <div class="swiper-button-next rental-swiper-next  rental-arrow position-absolute"></div>
-            <div class="swiper-button-prev rental-swiper-prev rental-arrow position-absolute"></div>
+        <div
+          class="swiper-button-next rental-swiper-next rental-arrow position-absolute"></div>
+        <div
+          class="swiper-button-prev rental-swiper-prev rental-arrow position-absolute"></div>
 
-            <div class="swiper rental-swiper mb-5">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car1.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Seat Leon TSI 2020</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Citadine
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Auto</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small"> Ess </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 479 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car2.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Skoda Fabia 2024</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Citadine
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Manuelle</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small">Ess</li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 449 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car3.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Suzuki Swift 2024</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Citadine
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Manuelle</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small"> Ess </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 369 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car1.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Suzuki Celerio 2022</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Citadine
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Manuelle</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small"> Ess </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 259 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car2.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Skoda Fabia 2022</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Sports
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Citadine</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small"> Ess </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 399 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <a href="car-single.html"><img src="../images/car3.png" class="card-img-top" alt="..."></a>
-                            <div class="card-body p-4">
-                                <a href="car-single.html">
-                                    <h4 class="card-title">Hyundai I20 BVA 2024</h4>
-                                </a>
-                                <div class="card-text ">
-                                    <ul class="d-flex list-unstyled">
-                                        <li class="rental-list">
-                                            Citadine
-                                        </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> Manuelle</li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list"> 4 Passagers </li>
-                                        <li class="rental-list"> <img src="../images/dot.png" class="px-3" alt="image">
-                                        </li>
-                                        <li class="rental-list display-small"> Ess </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="pt-2">TND 469 <span class="rental-price">/jour</span></h3>
-                                    <a href="car-single.html" class="btn btn-primary">Louer </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="swiper rental-swiper mb-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car1.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Seat Leon TSI 2020</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Auto</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 479 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                  </div>
                 </div>
-
+              </div>
             </div>
-
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car2.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Skoda Fabia 2024</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 449 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car3.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Suzuki Swift 2024</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 369 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car1.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Suzuki Celerio 2022</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 259 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car2.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Skoda Fabia 2022</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 399 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="car-single.html"
+                  ><img src="../images/car3.png" class="card-img-top" alt="..."
+                /></a>
+                <div class="card-body p-4">
+                  <a href="car-single.html">
+                    <h4 class="card-title">Hyundai I20 BVA 2024</h4>
+                  </a>
+                  <div class="card-text">
+                    <ul class="d-flex list-unstyled">
+                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">
+                        <img src="../images/dot.png" class="px-3" alt="image" />
+                      </li>
+                      <li class="rental-list display-small">Ess</li>
+                    </ul>
+                  </div>
+                  <hr />
+                  <div class="d-flex justify-content-between">
+                    <h3 class="pt-2">
+                      TND 469 <span class="rental-price">/jour</span>
+                    </h3>
+                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-
+      </div>
     </section>
 
     <!-- testimonial section start  -->
-    <section id="testimonial" class=" position-relative">
-        <div class="pattern-overlay pattern-left position-absolute">
-            <img src="../images/testimonial-pattern.png" alt="pattern">
-        </div>
-        <div class="container my-5 py-5">
-            <div class="swiper testimonial-swiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide text-center">
-                        <div class="offset-2 col-8">
-                            <iconify-icon icon="mdi:format-quote-open" class="testimonial-icon"></iconify-icon>
-                            <p class="testimonial-paragraph">
-                                J’ai loué une voiture chez vous pour mon voyage à Sousse. Le service était impeccable, la voiture propre et bien
-                                entretenue. Je recommande vivement !
-                            </p>
-                            <h5>Nadia Ben Salah</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide text-center">
-                        <div class="offset-2 col-8">
-                            <iconify-icon icon="mdi:format-quote-open" class="testimonial-icon"></iconify-icon>
-                            <p class="testimonial-paragraph">Votre agence de location m’a sauvé la mise lors de mon séjour à Tunis. La voiture était prête à l’heure, et le personnel
-                            était très professionnel
-                            </p>
-                            <h5>Ahmed Khelifi</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide text-center">
-                        <div class="offset-2 col-8">
-                            <iconify-icon icon="mdi:format-quote-open" class="testimonial-icon"></iconify-icon>
-                            <p class="testimonial-paragraph">Je suis une cliente fidèle depuis des années. Votre flotte de voitures est variée, et les tarifs sont compétitifs. Merci
-                            pour votre excellent service !
-                            </p>
-                            <h5>Leila Ammar</h5>
-                        </div>
-                    </div>
-                    <div class="swiper-slide text-center">
-                        <div class="offset-2 col-8">
-                            <iconify-icon icon="mdi:format-quote-open" class="testimonial-icon"></iconify-icon>
-                            <p class="testimonial-paragraph">
-                                J’ai loué une voiture pour un week-end à Hammamet. Le processus était simple, et la voiture était en parfait état. Je
-                                reviendrai chez vous sans hésiter.
-                            </p>
-                            <h5>Karim Belhadj</h5>
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="swiper-pagination position-unset mt-4"></div>
+    <section id="testimonial" class="position-relative">
+      <div class="pattern-overlay pattern-left position-absolute">
+        <img src="../images/testimonial-pattern.png" alt="pattern" />
+      </div>
+      <div class="container my-5 py-5">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide text-center">
+              <div class="offset-2 col-8">
+                <iconify-icon
+                  icon="mdi:format-quote-open"
+                  class="testimonial-icon"></iconify-icon>
+                <p class="testimonial-paragraph">
+                  J’ai loué une voiture chez vous pour mon voyage à Sousse. Le
+                  service était impeccable, la voiture propre et bien
+                  entretenue. Je recommande vivement !
+                </p>
+                <h5>Nadia Ben Salah</h5>
+              </div>
             </div>
+            <div class="swiper-slide text-center">
+              <div class="offset-2 col-8">
+                <iconify-icon
+                  icon="mdi:format-quote-open"
+                  class="testimonial-icon"></iconify-icon>
+                <p class="testimonial-paragraph">
+                  Votre agence de location m’a sauvé la mise lors de mon séjour
+                  à Tunis. La voiture était prête à l’heure, et le personnel
+                  était très professionnel
+                </p>
+                <h5>Ahmed Khelifi</h5>
+              </div>
+            </div>
+            <div class="swiper-slide text-center">
+              <div class="offset-2 col-8">
+                <iconify-icon
+                  icon="mdi:format-quote-open"
+                  class="testimonial-icon"></iconify-icon>
+                <p class="testimonial-paragraph">
+                  Je suis une cliente fidèle depuis des années. Votre flotte de
+                  voitures est variée, et les tarifs sont compétitifs. Merci
+                  pour votre excellent service !
+                </p>
+                <h5>Leila Ammar</h5>
+              </div>
+            </div>
+            <div class="swiper-slide text-center">
+              <div class="offset-2 col-8">
+                <iconify-icon
+                  icon="mdi:format-quote-open"
+                  class="testimonial-icon"></iconify-icon>
+                <p class="testimonial-paragraph">
+                  J’ai loué une voiture pour un week-end à Hammamet. Le
+                  processus était simple, et la voiture était en parfait état.
+                  Je reviendrai chez vous sans hésiter.
+                </p>
+                <h5>Karim Belhadj</h5>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination position-unset mt-4"></div>
         </div>
-
-
-
+      </div>
     </section>
 
     <!-- pricing section start  -->
     <section id="pricing">
-        <div class=" container  py-5 my-5">
-            <h2 class=" text-center my-5">VOIR NOTRE <span class="text-primary">PLAN TARIFAIRE</span> </h2>
+      <div class="container py-5 my-5">
+        <h2 class="text-center my-5">
+          VOIR NOTRE <span class="text-primary">PLAN TARIFAIRE</span>
+        </h2>
 
-            <div class="d-flex justify-content-center">
-                <label class="pt-2" id="monthly-label">Mensuel</label>
-                <span class="form-check form-switch p-0">
-                    <input class="form-check-input mx-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                        checked>
-                    <label class="pt-2" id="yearly-label" for="flexSwitchCheckChecked">Annuel</label>
-                </span>
-            </div>
-
-
-            <div class="row py-4">
-                <div class="  col-lg-3 col-sm-6 col-12 pb-4">
-                    <div class=" pricing-lable pt-5 ">
-                        <div class="pt-3 ps-2">
-                            <h3>Économisez en choisissant notre meilleur plan</h3>
-                            <p>Choisissez notre meilleur plan pour économiser beaucoup.</p>
-                        </div>
-
-                        <iconify-icon class="pricing-lable-icon "
-                            icon="fluent:vehicle-car-profile-ltr-20-regular"></iconify-icon>
-
-
-                    </div>
-                </div>
-
-                <div class=" col-lg-3 col-sm-6 col-12 pb-4">
-                    <div class=" pricing-detail py-5  text-center">
-                        <div class="pricing-content">
-                            <h5>Essentiel</h5>
-
-                            <div class="content monthly pt-2">
-                                <h3>$29.50</h3>
-                            </div>
-                            <div class="content yearly pt-2">
-                                <h3>$350.70</h3>
-                            </div>
-
-                            <div class="pt-4">
-                                <p>✓ Carburant plein</p>
-                                <p>✓ Siège bébé / réhausseur</p>
-                                <p>✓ GPS</p>
-                            </div>
-
-                        </div>
-
-                        <div class="pricing-button">
-                            <button class="btn btn-primary">Choisir ce plan </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" col-lg-3 col-sm-6 col-12 pb-4">
-                    <div class=" pricing-detail py-5  text-center">
-                        <div class="pricing-content">
-                            <h5 class="price-recommend">Recommandé</h5>
-                            <div class="content monthly pt-2">
-                                <h3>$44.40</h3>
-                            </div>
-                            <div class="content yearly pt-2">
-                                <h3>$530.60</h3>
-                            </div>
-
-                            <div class="pt-4">
-                                <p>✓ Carburant plein</p>
-                                <p>✓ Siège bébé / réhausseur</p>
-                                <p>✓ GPS</p>
-                                <p>✓ Assurance collision/Vol</p>
-                            </div>
-
-                        </div>
-
-                        <div class="pricing-button">
-                            <button class="btn btn-primary active">Choisir ce plan </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" col-lg-3 col-sm-6 col-12 pb-4">
-                    <div class=" pricing-detail py-5  text-center">
-                        <div class="pricing-content">
-                            <h5>Business</h5>
-                            <div class="content monthly pt-2">
-                                <h3>$70.50</h3>
-                            </div>
-                            <div class="content yearly pt-2">
-                                <h3>$840.30</h3>
-                            </div>
-
-                            <div class="pt-4">
-                                <p>✓ Carburant plein</p>
-                                <p>✓ Siège bébé / réhausseur</p>
-                                <p>✓ GPS</p>
-                                <p>✓ Assurance collision/Vol</p>
-                                <p>✓ Chauffeur </p>
-                                <p>✓ Pocket Wifi</p>
-                                <p>✓ Fly & drive</p>
-                            </div>
-
-                        </div>
-
-                        <div class="pricing-button">
-                            <button class="btn btn-primary">Choisir ce plan </button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
+        <div class="d-flex justify-content-center">
+          <label class="pt-2" id="monthly-label">Mensuel</label>
+          <span class="form-check form-switch p-0">
+            <input
+              class="form-check-input mx-2"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              checked />
+            <label class="pt-2" id="yearly-label" for="flexSwitchCheckChecked"
+              >Annuel</label
+            >
+          </span>
         </div>
+
+        <div class="row py-4">
+          <div class="col-lg-3 col-sm-6 col-12 pb-4">
+            <div class="pricing-lable pt-5">
+              <div class="pt-3 ps-2">
+                <h3>Économisez en choisissant notre meilleur plan</h3>
+                <p>Choisissez notre meilleur plan pour économiser beaucoup.</p>
+              </div>
+
+              <iconify-icon
+                class="pricing-lable-icon"
+                icon="fluent:vehicle-car-profile-ltr-20-regular"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12 pb-4">
+            <div class="pricing-detail py-5 text-center">
+              <div class="pricing-content">
+                <h5>Essentiel</h5>
+
+                <div class="content monthly pt-2">
+                  <h3>$29.50</h3>
+                </div>
+                <div class="content yearly pt-2">
+                  <h3>$350.70</h3>
+                </div>
+
+                <div class="pt-4">
+                  <p>✓ Carburant plein</p>
+                  <p>✓ Siège bébé / réhausseur</p>
+                  <p>✓ GPS</p>
+                </div>
+              </div>
+
+              <div class="pricing-button">
+                <button class="btn btn-primary">Choisir ce plan</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12 pb-4">
+            <div class="pricing-detail py-5 text-center">
+              <div class="pricing-content">
+                <h5 class="price-recommend">Recommandé</h5>
+                <div class="content monthly pt-2">
+                  <h3>$44.40</h3>
+                </div>
+                <div class="content yearly pt-2">
+                  <h3>$530.60</h3>
+                </div>
+
+                <div class="pt-4">
+                  <p>✓ Carburant plein</p>
+                  <p>✓ Siège bébé / réhausseur</p>
+                  <p>✓ GPS</p>
+                  <p>✓ Assurance collision/Vol</p>
+                </div>
+              </div>
+
+              <div class="pricing-button">
+                <button class="btn btn-primary active">Choisir ce plan</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12 pb-4">
+            <div class="pricing-detail py-5 text-center">
+              <div class="pricing-content">
+                <h5>Business</h5>
+                <div class="content monthly pt-2">
+                  <h3>$70.50</h3>
+                </div>
+                <div class="content yearly pt-2">
+                  <h3>$840.30</h3>
+                </div>
+
+                <div class="pt-4">
+                  <p>✓ Carburant plein</p>
+                  <p>✓ Siège bébé / réhausseur</p>
+                  <p>✓ GPS</p>
+                  <p>✓ Assurance collision/Vol</p>
+                  <p>✓ Chauffeur</p>
+                  <p>✓ Pocket Wifi</p>
+                  <p>✓ Fly & drive</p>
+                </div>
+              </div>
+
+              <div class="pricing-button">
+                <button class="btn btn-primary">Choisir ce plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- services section start  -->
     <section id="services">
-
-        <div class="container  py-5 my-5">
-            <div class="row py-5 ">
-                <div class=" pb-5  col-10 col-sm-8 col-lg-6">
-                    <h2 class="">Choisir <span class="text-primary">Les meilleurs services</span> que vous avez besoin.</h2>
-                </div>
-                <div class=" pb-5  col-lg-6">
-                    <p class="pt-4">“Choisissez parmi nos services pour répondre à vos besoins. Que vous recherchiez une voiture économique, spacieuse ou de
-                    luxe, nous sommes là pour vous offrir une expérience de location exceptionnelle !” 😊
- </p>
-                </div>
-            </div>
-
+      <div class="container py-5 my-5">
+        <div class="row py-5">
+          <div class="pb-5 col-10 col-sm-8 col-lg-6">
+            <h2 class="">
+              Choisir
+              <span class="text-primary">Les meilleurs services</span> que vous
+              avez besoin.
+            </h2>
+          </div>
+          <div class="pb-5 col-lg-6">
+            <p class="pt-4">
+              “Choisissez parmi nos services pour répondre à vos besoins. Que
+              vous recherchiez une voiture économique, spacieuse ou de luxe,
+              nous sommes là pour vous offrir une expérience de location
+              exceptionnelle !” 😊
+            </p>
+          </div>
         </div>
-
+      </div>
     </section>
 
     <section id="service-2">
-        <div class=" services-sub container mb-5 pb-5">
-            <div class="row">
-                <div class=" mt-4 col-6 col-lg-3">
-                    <div class="services-components text-center pt-4 pb-3">
-                        <iconify-icon class="services-icon my-2" icon="solar:shield-check-outline"></iconify-icon>
-                        <h5>PAIEMENT SÉCURISÉ</h5>
-                        <p>Nous vous offrons un processus de paiement sécurisé pour toutes vos transactions. Vos informations personnelles sont protégées,.</p>
-                    </div>
-                </div>
-                <div class=" mt-4 col-6 col-lg-3">
-                    <div class="services-components text-center pt-4 pb-3">
-                        <iconify-icon class="services-icon my-2" icon="solar:bookmark-opened-outline"></iconify-icon>
-                        <h5>Tout classes de véhicules</h5>
-                        <p>Quelle que soit votre préférence, nous avons une large gamme de véhicules disponibles. Des économiques aux luxueuses.</p>
-                    </div>
-                </div>
-                <div class=" mt-4 col-6 col-lg-3">
-                    <div class="services-components text-center pt-4 pb-3">
-                        <iconify-icon class="services-icon my-2" icon="solar:user-circle-outline"></iconify-icon>
-                        <h5>Options D’autopartage</h5>
-                        <p>Vous pouvez partager votre voiture avec d’autres utilisateurs lorsque vous ne l’utilisez pas. C’est pratique, économique
-                        et écologique !</p>
-                    </div>
-                </div>
-                <div class=" mt-4 col-6 col-lg-3">
-                    <div class="services-components text-center pt-4 pb-3">
-                        <iconify-icon class="services-icon my-2" icon="solar:call-chat-outline"></iconify-icon>
-                        <h5>Centre d’aide et support</h5>
-                        <p>Notre équipe est là pour répondre à toutes vos questions et vous aider en cas de besoin. Contactez-nous pour une
-                        assistance rapide et efficace.</p>
-                    </div>
-                </div>
-
+      <div class="services-sub container mb-5 pb-5">
+        <div class="row">
+          <div class="mt-4 col-6 col-lg-3">
+            <div class="services-components text-center pt-4 pb-3">
+              <iconify-icon
+                class="services-icon my-2"
+                icon="solar:shield-check-outline"></iconify-icon>
+              <h5>PAIEMENT SÉCURISÉ</h5>
+              <p>
+                Nous vous offrons un processus de paiement sécurisé pour toutes
+                vos transactions. Vos informations personnelles sont protégées.
+              </p>
             </div>
+          </div>
+          <div class="mt-4 col-6 col-lg-3">
+            <div class="services-components text-center pt-4 pb-3">
+              <iconify-icon
+                class="services-icon my-2"
+                icon="solar:bookmark-opened-outline"></iconify-icon>
+              <h5>Tout classes de véhicules</h5>
+              <p>
+                Quelle que soit votre préférence, nous avons une large gamme de
+                véhicules disponibles. Des économiques aux luxueuses.
+              </p>
+            </div>
+          </div>
+          <div class="mt-4 col-6 col-lg-3">
+            <div class="services-components text-center pt-4 pb-3">
+              <iconify-icon
+                class="services-icon my-2"
+                icon="solar:user-circle-outline"></iconify-icon>
+              <h5>Options D’autopartage</h5>
+              <p>
+                Vous pouvez partager votre voiture avec d’autres utilisateurs
+                lorsque vous ne l’utilisez pas. C’est pratique, économique et
+                écologique !
+              </p>
+            </div>
+          </div>
+          <div class="mt-4 col-6 col-lg-3">
+            <div class="services-components text-center pt-4 pb-3">
+              <iconify-icon
+                class="services-icon my-2"
+                icon="solar:call-chat-outline"></iconify-icon>
+              <h5>Centre d’aide et support</h5>
+              <p>
+                Notre équipe est là pour répondre à toutes vos questions et vous
+                aider en cas de besoin. Contactez-nous pour une assistance
+                rapide et efficace.
+              </p>
+            </div>
+          </div>
         </div>
-
+      </div>
     </section>
 
     <!-- faq section start  -->
     <section id="faq">
+      <div class="container my-5 py-5">
+        <h2 class="text-center my-5">
+          Nous répondons à vos <span class="text-primary"> questions</span>
+        </h2>
 
-        <div class="container my-5 py-5 ">
-            <h2 class=" text-center my-5">Nous répondons à vos <span class="text-primary"> questions</span> </h2>
+        <div
+          class="accordion col-md-8 offset-md-2"
+          id="accordionPanelsStayOpenExample">
+          <div class="accordion-item mt-3">
+            <h5 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                Pourquoi choisir Nos services ?
+              </button>
+            </h5>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <p>
+                  GoCarTunisia est un choix idéal pour plusieurs raisons :
 
-
-            <div class="accordion col-md-8 offset-md-2" id="accordionPanelsStayOpenExample">
-
-                <div class="accordion-item mt-3">
-                    <h5 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            Pourquoi choisir Nos services ?
-                        </button>
-                    </h5>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p>
-                                GoCarTunisia est un choix idéal pour plusieurs raisons :
-                                <ul>
-                                    <li>Flotte variée : Nous proposons une large gamme de véhicules, des économiques aux luxueux, pour répondre à tous les
-                                    besoins.</li>
-                                    <li>Tarifs compétitifs : Nos prix sont concurrentiels et transparents.</li>
-                                    <li>Service client de qualité : Notre équipe est disponible pour vous aider à tout moment.</li>
-                                    <li>Options flexibles : Choisissez parmi nos forfaits kilométriques et options de restitution.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="accordion-item mt-3">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Comment savoir quel prix de location est le meilleur ?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                            <p>
-                                <ul>
-                                    <li>Comparez les tarifs entre différentes agences de location.</li>
-                                    <li>Tenez compte du type de véhicule, du kilométrage inclus et des options supplémentaires.</li>
-                                    <li>Pensez à vos besoins spécifiques (court terme, long terme, etc.).</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="accordion-item mt-3">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            Particularités de GoCarTunisia
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body">
-                            <p>
-                                <ul>
-                                    <li>Paiement sécurisé : Vos transactions sont protégées.</li>
-                                    <li>Toutes classes de véhicules : Choisissez celui qui vous convient.</li>
-                                    <li>Options d’autopartage : Partagez votre voiture avec d’autres utilisateurs.</li>
-                                    <li>Centre d’aide et support : Notre équipe est là pour vous assister.</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
-
-
-
+                  <li>
+                    Flotte variée : Nous proposons une large gamme de véhicules,
+                    des économiques aux luxueux, pour répondre à tous les
+                    besoins.
+                  </li>
+                  <li>
+                    Tarifs compétitifs : Nos prix sont concurrentiels et
+                    transparents.
+                  </li>
+                  <li>
+                    Service client de qualité : Notre équipe est disponible pour
+                    vous aider à tout moment.
+                  </li>
+                  <li>
+                    Options flexibles : Choisissez parmi nos forfaits
+                    kilométriques et options de restitution.
+                  </li>
+                </p>
+              </div>
             </div>
-
+          </div>
+          <hr />
+          <div class="accordion-item mt-3">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                Comment savoir quel prix de location est le meilleur ?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                <p>
+                  <li>
+                    Comparez les tarifs entre différentes agences de location.
+                  </li>
+                  <li>
+                    Tenez compte du type de véhicule, du kilométrage inclus et
+                    des options supplémentaires.
+                  </li>
+                  <li>
+                    Pensez à vos besoins spécifiques (court terme, long terme,
+                    etc.).
+                  </li>
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="accordion-item mt-3">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                Particularités de GoCarTunisia
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                <p>
+                  <li>Paiement sécurisé : Vos transactions sont protégées.</li>
+                  <li>
+                    Toutes classes de véhicules : Choisissez celui qui vous
+                    convient.
+                  </li>
+                  <li>
+                    Options d’autopartage : Partagez votre voiture avec d’autres
+                    utilisateurs.
+                  </li>
+                  <li>
+                    Centre d’aide et support : Notre équipe est là pour vous
+                    assister.
+                  </li>
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
         </div>
+      </div>
     </section>
 
     <!-- blog section start  -->
     <section id="blog">
-
-        <div class="container  py-5 my-5">
-            <div class="row py-5 ">
-                <div class="  pt-3 col-10 col-sm-8 col-lg-5">
-                    <h2 class="">NOS <span class="text-primary">ARTICLES RÉCENTS</span> </h2>
-                    <a href="blog.html" class="btn btn-primary mt-4">Lire Articles </a>
-
-
-                </div>
-                <div class=" mt-5 mt-lg-0 col-lg-7">
-                    <div class=" pt-3 d-flex">
-                        <div class="">
-                            <h3>Jan 2 <br> 2023</h3>
-                        </div>
-                        <div class="ms-5">
-                            <p>Conseils</p>
-                            <a href="single-post.html" class="blog-title">Services de location de voitures les plus sûrs en 2023</a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class=" pt-3 d-flex">
-                        <div class="">
-                            <h3>Jan 5<br> 2023</h3>
-                        </div>
-                        <div class="ms-5">
-                            <p>Rental</p>
-                            <a href="single-post.html" class="blog-title">Meilleure collection de voitures au monde</a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class=" pt-3 d-flex">
-                        <div class="">
-                            <h3>Jan 8 <br> 2023</h3>
-                        </div>
-                        <div class="ms-5">
-                            <p>Tricks</p>
-                            <a href="single-post.html" class="blog-title">Quelle voiture est la meilleure pour voyager</a>
-                        </div>
-                    </div>
-                    <hr>
-
-                </div>
+      <div class="container py-5 my-5">
+        <div class="row py-5">
+          <div class="pt-3 col-10 col-sm-8 col-lg-5">
+            <h2 class="">
+              NOS <span class="text-primary">ARTICLES RÉCENTS</span>
+            </h2>
+            <a href="blog.html" class="btn btn-primary mt-4">Lire Articles </a>
+          </div>
+          <div class="mt-5 mt-lg-0 col-lg-7">
+            <div class="pt-3 d-flex">
+              <div class="">
+                <h3>
+                  Jan 2 <br />
+                  2023
+                </h3>
+              </div>
+              <div class="ms-5">
+                <p>Conseils</p>
+                <a href="single-post.html" class="blog-title"
+                  >Services de location de voitures les plus sûrs en 2023</a
+                >
+              </div>
             </div>
-
+            <hr />
+            <div class="pt-3 d-flex">
+              <div class="">
+                <h3>
+                  Jan 5<br />
+                  2023
+                </h3>
+              </div>
+              <div class="ms-5">
+                <p>Rental</p>
+                <a href="single-post.html" class="blog-title"
+                  >Meilleure collection de voitures au monde</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div class="pt-3 d-flex">
+              <div class="">
+                <h3>
+                  Jan 8 <br />
+                  2023
+                </h3>
+              </div>
+              <div class="ms-5">
+                <p>Tricks</p>
+                <a href="single-post.html" class="blog-title"
+                  >Quelle voiture est la meilleure pour voyager</a
+                >
+              </div>
+            </div>
+            <hr />
+          </div>
         </div>
-
+      </div>
     </section>
 
     <!-- call-to-action section start  -->
     <section id="action" class="position-relative">
+      <div class="pattern-overlay pattern-right position-absolute">
+        <img src="../images/call-to-action-pattern.png" alt="pattern" />
+      </div>
 
-        <div class="pattern-overlay pattern-right position-absolute">
-            <img src="../images/call-to-action-pattern.png" alt="pattern">
+      <div class="container py-5 my-5">
+        <div class="row py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <h2 class="">
+              Let’s begin with
+              <span class="text-primary">GoCarTunisia </span>rental.
+            </h2>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              “Commencez votre aventure avec
+              <span class="text-primary">GoCarTunisia </span>! Notre service de
+              location de voitures vous offre une expérience sans tracas. Que
+              vous voyagiez pour les affaires ou le plaisir, nous avons le
+              véhicule parfait pour vous. Cliquez sur le bouton "Contactez Nous"
+              pour réserver dès maintenant !” 😊
+            </p>
+            <a href="contact.html" class="btn btn-primary mt-2"
+              >Contactez Nous</a
+            >
+          </div>
         </div>
-
-        <div class="container  py-5 my-5">
-            <div class="row py-5 ">
-                <div class=" col-10 col-sm-8 col-lg-6">
-                    <h2 class="">Let’s begin with <span class="text-primary">GoCarTunisia </span>rental.</h2>
-                </div>
-                <div class=" col-lg-6">
-                    <p>“Commencez votre aventure avec <span class="text-primary">GoCarTunisia </span>! Notre service de location de voitures vous offre une expérience sans
-                    tracas. Que vous voyagiez pour les affaires ou le plaisir, nous avons le véhicule parfait pour vous. Cliquez sur le
-                    bouton ‘Contact’ pour réserver dès maintenant !” 😊</p>
-                    <a href="contact.html" class="btn btn-primary mt-2">Contact</a>
-                </div>
-            </div>
-
-        </div>
-
+      </div>
     </section>
 
     <!-- Footer Section Starts -->
     <section id="footer">
-        <div class="container footer-container mt-5">
-            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
+      <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+          <div class="col-md-4 mt-5 mt-md-0">
+            <img src="../images/logo.png" alt="image" />
+            <p class="py-3">Votre route est notre passion ! 😊</p>
+            <div class="d-flex align-items-center">
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:facebook"></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:twitter"></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:instagram"></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:linkedin"></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:youtube"></iconify-icon
+              ></a>
+            </div>
+          </div>
 
-                <div class=" col-md-4 mt-5 mt-md-0 ">
-                    <img src="../images/logo.png" alt="image">
-                    <p class="py-3">Votre route est notre passion ! 😊</p>
-                    <div class="d-flex align-items-center ">
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:facebook"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:twitter"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:instagram"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:linkedin"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:youtube"></iconify-icon></a>
-                    </div>
+          <div class="col-md-7 offset-md-1 mt-5">
+            <ul class="footer-nav list-unstyled">
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" aria-current="page" href="#"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">Réservation</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">About</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">Voitures</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">Services</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
 
-                </div>
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
 
-                <div class="col-md-7 offset-md-1 mt-5">
-                    <ul class="footer-nav list-unstyled ">
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" aria-current="page" href="#">Accueil</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">Réservation</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">About</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">Voitures</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">Services</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </footer>
-        </div>
-
-
-
-        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
-
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
-                <div class="col-md-6 d-flex align-items-center">
-                    <p>© 2024 GoCarTunisia - All rights reserved</p>
-
-                </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-end">
-                    <p class="">© 2023 created By:<a href="" class="website-link"
-                            target="_blank"> <b><u>NouriWebDev</u></b></a></p>
-                </div>
-
-            </footer>
-        </div>
+      <div class="container">
+        <footer
+          class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
+          <div class="col-md-6 d-flex align-items-center">
+            <p>© 2024 GoCarTunisia - All rights reserved</p>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-end">
+            <p class="">
+              © 2023 created By:<a
+                href="#"
+                class="website-link"
+                target="_blank">
+                <b><u>NouriWebDev</u></b></a
+              >
+            </p>
+          </div>
+        </footer>
+      </div>
     </section>
-
-
-
 
     <!-- script ================================================== -->
     <script src="../js/jquery-1.11.0.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-
-</body>
-
+  </body>
 </html>
