@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoCar - Free Bootstrap Website Template for Car Rental</title>
+    <title>GoCarTunisia</title>
 
     <!--vendor css ================================================== -->
     <link rel="stylesheet" type="text/css" href="css/vendor.css" />
@@ -23,7 +23,9 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!-- Style Sheet ================================================== -->
     <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -89,8 +91,50 @@
               <li class="nav-item">
                 <a class="nav-link px-3" href="#action">Contact</a>
               </li>
+              <!-- <li class="nav-item">
+                <a class="px-3" href="./fr/"
+                  ><img
+                    src="https://flagcdn.com/16x12/fr.png"
+                    alt="Français "
+                    title="basculez vers la langue française" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="px-3" href="./ar/"
+                  ><img
+                    src="https://flagcdn.com/16x12/sa.png"
+                    alt="arabe"
+                    title="التحول إلى اللغة العربية"
+                /></a>
+              </li> -->
             </ul>
-
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: var(--link-color)">
+                  <i class="bi-translate"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/fr/">
+                      <img src="https://flagcdn.com/16x12/fr.png" /> Francais</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/ar/">
+                      <img src="https://flagcdn.com/16x12/tn.png" /> العربية</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div
               class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center">
               <ul class="navbar-nav justify-content-end align-items-center">
@@ -725,7 +769,7 @@
             <div class="swiper-slide">
               <div class="card">
                 <a href="car-single.html"
-                  ><img src="images/car1.png" class="card-img-top" alt="..."
+                  ><img src="images/car4.png" class="card-img-top" alt="..."
                 /></a>
                 <div class="card-body p-4">
                   <a href="car-single.html">
@@ -763,7 +807,7 @@
             <div class="swiper-slide">
               <div class="card">
                 <a href="car-single.html"
-                  ><img src="images/car2.png" class="card-img-top" alt="..."
+                  ><img src="images/car5.png" class="card-img-top" alt="..."
                 /></a>
                 <div class="card-body p-4">
                   <a href="car-single.html">
@@ -801,7 +845,7 @@
             <div class="swiper-slide">
               <div class="card">
                 <a href="car-single.html"
-                  ><img src="images/car3.png" class="card-img-top" alt="..."
+                  ><img src="images/car6.png" class="card-img-top" alt="..."
                 /></a>
                 <div class="card-body p-4">
                   <a href="car-single.html">
@@ -1348,13 +1392,13 @@
                 <a class="nav-link px-4" href="#">About</a>
               </li>
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" href="#">Cars</a>
+                <a class="nav-link px-4" href="#rental">Cars</a>
               </li>
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" href="#">Services</a>
+                <a class="nav-link px-4" href="#services">Services</a>
               </li>
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" href="#">Contact</a>
+                <a class="nav-link px-4" href="#action">Contact</a>
               </li>
             </ul>
           </div>
