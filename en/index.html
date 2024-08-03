@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,7 +45,7 @@
       class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed">
       <div class="container">
         <a class="navbar-brand" href="index.html"
-          ><img src="../images/logo.png" alt="logo"
+          ><img src="images/logo.png" alt="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -73,14 +73,14 @@
               class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
                 <a class="nav-link active px-3" aria-current="page" href="#"
-                  >Accueil</a
+                  >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link px-3" href="#rental">Voitures</a>
+                <a class="nav-link px-3" href="#rental">Cars</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-3" href="#pricing">prix</a>
+                <a class="nav-link px-3" href="#pricing">Pricing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link px-3" href="#services">Services</a>
@@ -91,6 +91,22 @@
               <li class="nav-item">
                 <a class="nav-link px-3" href="#action">Contact</a>
               </li>
+              <!-- <li class="nav-item">
+                <a class="px-3" href="./fr/"
+                  ><img
+                    src="https://flagcdn.com/16x12/fr.png"
+                    alt="Français "
+                    title="basculez vers la langue française" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="px-3" href="./ar/"
+                  ><img
+                    src="https://flagcdn.com/16x12/sa.png"
+                    alt="arabe"
+                    title="التحول إلى اللغة العربية"
+                /></a>
+              </li> -->
             </ul>
             <div
               class="btn-group"
@@ -107,12 +123,12 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="../">
-                      <img src="https://flagcdn.com/16x12/gb.png" /> English</a
+                    <a class="dropdown-item" href="../index.html">
+                      <img src="https://flagcdn.com/16x12/fr.png" /> Francais</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/ar/">
+                    <a class="dropdown-item" href="../ar/index.html">
                       <img src="https://flagcdn.com/16x12/tn.png" /> العربية</a
                     >
                   </li>
@@ -128,7 +144,7 @@
                     href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
-                    se connecter
+                    Login
                   </a>
                 </li>
                 <!-- Modal -->
@@ -163,7 +179,7 @@
                                 role="tab"
                                 aria-controls="nav-sign-in"
                                 aria-selected="true">
-                                se connecter
+                                Log In
                               </button>
                               <button
                                 class="btn btn-outline-primary text-uppercase"
@@ -174,7 +190,7 @@
                                 role="tab"
                                 aria-controls="nav-register"
                                 aria-selected="false">
-                                S’enregistrer
+                                Sign Up
                               </button>
                             </div>
                           </nav>
@@ -189,7 +205,7 @@
                                   <label
                                     for="exampleInputEmail1"
                                     class="form-label fs-6 text-uppercase fw-bold text-black"
-                                    >Votre Adresse E-mail</label
+                                    >Email Address</label
                                   >
                                   <input
                                     type="text"
@@ -202,19 +218,19 @@
                                   <label
                                     for="inputPassword1"
                                     class="form-label fs-6 text-uppercase fw-bold text-black"
-                                    >Votre Mot de Passe</label
+                                    >Password</label
                                   >
                                   <input
                                     type="password"
                                     id="inputPassword1"
-                                    placeholder="Mot de passe"
+                                    placeholder="Password"
                                     class="form-control ps-3"
                                     aria-describedby="passwordHelpBlock" />
                                   <div
                                     id="passwordHelpBlock"
                                     class="form-text text-center">
                                     <a href="#" class="password"
-                                      >Mot de passe oublié ?</a
+                                      >Forgot Password ?</a
                                     >
                                   </div>
                                 </div>
@@ -224,13 +240,13 @@
                                     required=""
                                     class="d-inline" />
                                   <span class="label-body text-black"
-                                    >Se souvenir de moi</span
+                                    >Remember Me</span
                                   >
                                 </label>
                                 <div class="d-grid my-3">
                                   <button
                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                    Se connecter
+                                    Log In
                                   </button>
                                 </div>
                               </form>
@@ -245,8 +261,8 @@
                                   <label
                                     for="exampleInputEmail2"
                                     class="form-label fs-6 text-uppercase fw-bold text-black"
-                                    >Adresse Email
-                                  </label>
+                                    >Email Address</label
+                                  >
                                   <input
                                     type="text"
                                     id="exampleInputEmail2"
@@ -258,12 +274,12 @@
                                   <label
                                     for="inputPassword2"
                                     class="form-label fs-6 text-uppercase fw-bold text-black"
-                                    >Mot de passe</label
+                                    >Password</label
                                   >
                                   <input
                                     type="password"
                                     id="inputPassword2"
-                                    placeholder="Mot de passe"
+                                    placeholder="Password"
                                     class="form-control ps-3"
                                     aria-describedby="passwordHelpBlock" />
                                 </div>
@@ -273,18 +289,18 @@
                                     required=""
                                     class="d-inline" />
                                   <span class="label-body text-black"
-                                    >J'accepte la
+                                    >I agree to the
                                     <a
                                       href="#"
                                       class="text-black password border-bottom"
-                                      >Politique de confidentialité</a
+                                      >Privacy Policy</a
                                     >
                                   </span>
                                 </label>
                                 <div class="d-grid my-3">
                                   <button
                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                    S'enregistrer
+                                    Sign Up
                                   </button>
                                 </div>
                               </form>
@@ -301,7 +317,7 @@
                 class="btn btn-outline-primary nav-button mx-3"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal2">
-                S'enregistrer
+                Sign in
               </button>
               <!-- Modal -->
               <div
@@ -335,7 +351,7 @@
                               role="tab"
                               aria-controls="nav-sign-in2"
                               aria-selected="false">
-                              Se Connecter
+                              Log In
                             </button>
                             <button
                               class="btn btn-outline-primary text-uppercase active"
@@ -346,7 +362,7 @@
                               role="tab"
                               aria-controls="nav-register2"
                               aria-selected="true">
-                              S'enregistrer
+                              Sign Up
                             </button>
                           </div>
                         </nav>
@@ -361,8 +377,8 @@
                                 <label
                                   for="exampleInputEmail3"
                                   class="form-label fs-6 text-uppercase fw-bold text-black"
-                                  >Addresse Email
-                                </label>
+                                  >Email Address</label
+                                >
                                 <input
                                   type="text"
                                   id="exampleInputEmail3"
@@ -374,19 +390,19 @@
                                 <label
                                   for="inputPassword3"
                                   class="form-label fs-6 text-uppercase fw-bold text-black"
-                                  >Mot de Passe</label
+                                  >Password</label
                                 >
                                 <input
                                   type="password"
                                   id="inputPassword3"
-                                  placeholder="Mot de passe"
+                                  placeholder="Password"
                                   class="form-control ps-3"
                                   aria-describedby="passwordHelpBlock" />
                                 <div
                                   id="passwordHelpBlock2"
                                   class="form-text text-center">
                                   <a href="#" class="password"
-                                    >Mot de passe oublié ?</a
+                                    >Forgot Password ?</a
                                   >
                                 </div>
                               </div>
@@ -396,13 +412,13 @@
                                   required=""
                                   class="d-inline" />
                                 <span class="label-body text-black"
-                                  >Se souvenir de moi</span
+                                  >Remember Me</span
                                 >
                               </label>
                               <div class="d-grid my-3">
                                 <button
                                   class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                  Se Connecter
+                                  Log In
                                 </button>
                               </div>
                             </form>
@@ -417,8 +433,8 @@
                                 <label
                                   for="exampleInputEmail4"
                                   class="form-label fs-6 text-uppercase fw-bold text-black"
-                                  >Addresse Email
-                                </label>
+                                  >Email Address</label
+                                >
                                 <input
                                   type="text"
                                   id="exampleInputEmail4"
@@ -435,7 +451,7 @@
                                 <input
                                   type="password"
                                   id="inputPassword4"
-                                  placeholder="Mot de passe"
+                                  placeholder="Password"
                                   class="form-control ps-3"
                                   aria-describedby="passwordHelpBlock" />
                               </div>
@@ -445,18 +461,18 @@
                                   required=""
                                   class="d-inline" />
                                 <span class="label-body text-black"
-                                  >J'accepte la
+                                  >I agree to the
                                   <a
                                     href="#"
                                     class="text-black password border-bottom"
-                                    >Politique de confidentalité</a
+                                    >Privacy Policy</a
                                   >
                                 </span>
                               </label>
                               <div class="d-grid my-3">
                                 <button
                                   class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                  S'enregistrer
+                                  Sign Up
                                 </button>
                               </div>
                             </form>
@@ -485,11 +501,10 @@
         <div class="row">
           <div class="detail mb-4">
             <h1 class="">
-              Trouvez votre
-              <span class="text-primary"> voiture de location </span>
+              Find your <span class="text-primary"> rental car </span>
             </h1>
             <p class="hero-paragraph">
-              Nous avons de nombreuses collections de voitures de location.
+              We have many best rental car collections.
             </p>
           </div>
         </div>
@@ -502,7 +517,7 @@
         <form class="row">
           <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
             <label for="vehicle" class="label-style text-capitalize form-label"
-              >Type de véhicule</label
+              >Vehicle type</label
             >
             <div class="input-group date">
               <!-- <input type="text" class="form-control p-3 " id="vehicle" placeholder="Select Car Group" /> -->
@@ -511,7 +526,7 @@
                 id="vehicle"
                 aria-label="Default select example"
                 style="background-image: none">
-                <option selected>Sélectionnez le type de véhicule</option>
+                <option selected>Select Vehicle Type</option>
                 <option value="1">Seat Leon TSI 2020</option>
                 <option value="2">Skoda Fabia 2024</option>
                 <option value="3">Suzuki Swift 2024</option>
@@ -529,14 +544,14 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
             <label for="location" class="label-style text-capitalize form-label"
-              >Lieu de prise en charge</label
+              >Picking up location</label
             >
             <div class="input-group date">
               <input
                 type="text"
                 class="form-control p-3 position-relative"
                 id="location"
-                placeholder="Aéroport ou n’importe où" />
+                placeholder="Airport or anywhere" />
               <span class="search-icon-position position-absolute p-3">
                 <iconify-icon
                   class="search-icons"
@@ -548,7 +563,7 @@
             <label
               for="pick-up-date"
               class="label-style text-capitalize form-label"
-              >Date de prise en charge</label
+              >Picking up date</label
             >
             <div class="input-group date" id="datepicker1">
               <input type="text" class="form-control p-3" id="pick-up-date" />
@@ -566,7 +581,7 @@
             <label
               for="return-date"
               class="label-style text-capitalize form-label"
-              >Date de retour</label
+              >Returning date</label
             >
             <div class="input-group date" id="datepicker2">
               <input type="text" class="form-control p-3" id="return-date" />
@@ -583,9 +598,7 @@
         </form>
 
         <div class="d-grid gap-2 mt-4">
-          <button class="btn btn-primary" type="button">
-            Trouvez votre voiture
-          </button>
+          <button class="btn btn-primary" type="button">Find your car</button>
         </div>
       </div>
     </section>
@@ -594,34 +607,32 @@
     <section id="process">
       <div class="process-content container">
         <h2 class="text-center my-5 pb-5">
-          Notre processus <span class="text-primary"> de location </span>
+          Our renting <span class="text-primary"> process </span>
         </h2>
         <hr class="progress-line" />
         <div class="row process-block">
           <div class="col-6 col-lg-3 text-start my-4">
             <div class="bullet"></div>
-            <h5 class="text-uppercase mt-5">Choisissez un véhicule</h5>
-            <p>Choisissez une parmi nos voitures disponibles..</p>
+            <h5 class="text-uppercase mt-5">Choose a vehicle</h5>
+            <p>Choose one from our available cars.</p>
           </div>
 
           <div class="col-6 col-lg-3 text-start my-4">
             <div class="bullet"></div>
-            <h5 class="text-uppercase mt-5">CHOISIR LE LIEU ET LA DATE</h5>
-            <p>Choisissez le lieu de réception et la date disponible.</p>
+            <h5 class="text-uppercase mt-5">Pick location & date</h5>
+            <p>Choose the reception location and available date.</p>
           </div>
 
           <div class="col-6 col-lg-3 text-start my-4">
             <div class="bullet"></div>
-            <h5 class="text-uppercase mt-5">Réservez votre voiture</h5>
-            <p>Faites-vite nous avons une forte demande.</p>
+            <h5 class="text-uppercase mt-5">Book your car</h5>
+            <p>Hurry, we have high demand.</p>
           </div>
 
           <div class="col-6 col-lg-3 text-start my-4">
             <div class="bullet"></div>
-            <h5 class="text-uppercase mt-5">Fin de processus</h5>
-            <p>
-              Choisissez un mode de paiement : par virement ou carte bancaire.
-            </p>
+            <h5 class="text-uppercase mt-5">Finish process</h5>
+            <p>Choose a payment method: by transfer or credit card.</p>
           </div>
         </div>
       </div>
@@ -631,7 +642,7 @@
     <section id="rental" class="position-relative">
       <div class="container my-5 py-5">
         <h2 class="text-center my-5">
-          Voitures pour <span class="text-primary"> location </span>
+          cars for <span class="text-primary"> rental </span>
         </h2>
 
         <div
@@ -644,7 +655,7 @@
             <div class="swiper-slide">
               <div class="card">
                 <a href="car-single.html"
-                  ><img src="../images/car1.png" class="card-img-top" alt="..."
+                  ><img src="images/car1.png" class="card-img-top" alt="..."
                 /></a>
                 <div class="card-body p-4">
                   <a href="car-single.html">
@@ -652,7 +663,7 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">city Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
@@ -660,19 +671,21 @@
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 479 <span class="rental-price">/jour</span>
+                      TND 479 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -688,27 +701,29 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">city Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">Manual</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 449 <span class="rental-price">/jour</span>
+                      TND 449 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -724,27 +739,29 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">city Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">Manual</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 369 <span class="rental-price">/jour</span>
+                      TND 369 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -760,27 +777,29 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">city Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">Manual</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 259 <span class="rental-price">/jour</span>
+                      TND 259 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -796,27 +815,29 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">City Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">Manual</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 399 <span class="rental-price">/jour</span>
+                      TND 399 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer</a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -832,27 +853,29 @@
                   </a>
                   <div class="card-text">
                     <ul class="d-flex list-unstyled">
-                      <li class="rental-list">Citadine</li>
+                      <li class="rental-list">city Car</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">Manuelle</li>
+                      <li class="rental-list">Manual</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list">4 Passagers</li>
+                      <li class="rental-list">4 Passengers</li>
                       <li class="rental-list">
                         <img src="../images/dot.png" class="px-3" alt="image" />
                       </li>
-                      <li class="rental-list display-small">Ess</li>
+                      <li class="rental-list display-small">Gas</li>
                     </ul>
                   </div>
                   <hr />
                   <div class="d-flex justify-content-between">
                     <h3 class="pt-2">
-                      TND 469 <span class="rental-price">/jour</span>
+                      TND 469 <span class="rental-price">/day</span>
                     </h3>
-                    <a href="car-single.html" class="btn btn-primary">Louer </a>
+                    <a href="car-single.html" class="btn btn-primary"
+                      >rent now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -876,9 +899,9 @@
                   icon="mdi:format-quote-open"
                   class="testimonial-icon"></iconify-icon>
                 <p class="testimonial-paragraph">
-                  J’ai loué une voiture chez vous pour mon voyage à Sousse. Le
-                  service était impeccable, la voiture propre et bien
-                  entretenue. Je recommande vivement !
+                  I rented a car from you for my trip to Sousse. The service was
+                  impeccable, the car clean and well maintained. I highly
+                  recommend !
                 </p>
                 <h5>Nadia Ben Salah</h5>
               </div>
@@ -889,9 +912,8 @@
                   icon="mdi:format-quote-open"
                   class="testimonial-icon"></iconify-icon>
                 <p class="testimonial-paragraph">
-                  Votre agence de location m’a sauvé la mise lors de mon séjour
-                  à Tunis. La voiture était prête à l’heure, et le personnel
-                  était très professionnel
+                  Your rental agency saved my day during my stay in Tunis. The
+                  car was ready on time, and the staff was very professional
                 </p>
                 <h5>Ahmed Khelifi</h5>
               </div>
@@ -902,9 +924,9 @@
                   icon="mdi:format-quote-open"
                   class="testimonial-icon"></iconify-icon>
                 <p class="testimonial-paragraph">
-                  Je suis une cliente fidèle depuis des années. Votre flotte de
-                  voitures est variée, et les tarifs sont compétitifs. Merci
-                  pour votre excellent service !
+                  I have been a loyal customer for years. Your car fleet is
+                  varied, and the prices are competitive. Thank you for your
+                  excellent service!
                 </p>
                 <h5>Leila Ammar</h5>
               </div>
@@ -915,9 +937,9 @@
                   icon="mdi:format-quote-open"
                   class="testimonial-icon"></iconify-icon>
                 <p class="testimonial-paragraph">
-                  J’ai loué une voiture pour un week-end à Hammamet. Le
-                  processus était simple, et la voiture était en parfait état.
-                  Je reviendrai chez vous sans hésiter.
+                  I rented a car for a weekend in Hammamet. The process was
+                  simple, and the car was in perfect condition. I will come back
+                  to your place without hesitation.
                 </p>
                 <h5>Karim Belhadj</h5>
               </div>
@@ -932,11 +954,11 @@
     <section id="pricing">
       <div class="container py-5 my-5">
         <h2 class="text-center my-5">
-          VOIR NOTRE <span class="text-primary">PLAN TARIFAIRE</span>
+          See our <span class="text-primary">pricing plan</span>
         </h2>
 
         <div class="d-flex justify-content-center">
-          <label class="pt-2" id="monthly-label">Mensuel</label>
+          <label class="pt-2" id="monthly-label">Monthly</label>
           <span class="form-check form-switch p-0">
             <input
               class="form-check-input mx-2"
@@ -945,7 +967,7 @@
               id="flexSwitchCheckChecked"
               checked />
             <label class="pt-2" id="yearly-label" for="flexSwitchCheckChecked"
-              >Annuel</label
+              >Yearly</label
             >
           </span>
         </div>
@@ -954,8 +976,8 @@
           <div class="col-lg-3 col-sm-6 col-12 pb-4">
             <div class="pricing-lable pt-5">
               <div class="pt-3 ps-2">
-                <h3>Économisez en choisissant notre meilleur plan</h3>
-                <p>Choisissez notre meilleur plan pour économiser beaucoup.</p>
+                <h3>Save by choosing our best plan</h3>
+                <p>Choose our best plan to save a lot.</p>
               </div>
 
               <iconify-icon
@@ -967,7 +989,7 @@
           <div class="col-lg-3 col-sm-6 col-12 pb-4">
             <div class="pricing-detail py-5 text-center">
               <div class="pricing-content">
-                <h5>Essentiel</h5>
+                <h5>Essential</h5>
 
                 <div class="content monthly pt-2">
                   <h3>$29.50</h3>
@@ -977,14 +999,14 @@
                 </div>
 
                 <div class="pt-4">
-                  <p>✓ Carburant plein</p>
-                  <p>✓ Siège bébé / réhausseur</p>
+                  <p>✓ Full fuel</p>
+                  <p>✓ Baby seat / booster seat</p>
                   <p>✓ GPS</p>
                 </div>
               </div>
 
               <div class="pricing-button">
-                <button class="btn btn-primary">Choisir ce plan</button>
+                <button class="btn btn-primary">Choose Plan</button>
               </div>
             </div>
           </div>
@@ -992,7 +1014,7 @@
           <div class="col-lg-3 col-sm-6 col-12 pb-4">
             <div class="pricing-detail py-5 text-center">
               <div class="pricing-content">
-                <h5 class="price-recommend">Recommandé</h5>
+                <h5 class="price-recommend">Recommended</h5>
                 <div class="content monthly pt-2">
                   <h3>$44.40</h3>
                 </div>
@@ -1001,15 +1023,15 @@
                 </div>
 
                 <div class="pt-4">
-                  <p>✓ Carburant plein</p>
-                  <p>✓ Siège bébé / réhausseur</p>
+                  <p>✓ Full fuel</p>
+                  <p>✓ Baby seat / booster seat</p>
                   <p>✓ GPS</p>
-                  <p>✓ Assurance collision/Vol</p>
+                  <p>✓ Collision/Theft Insurance</p>
                 </div>
               </div>
 
               <div class="pricing-button">
-                <button class="btn btn-primary active">Choisir ce plan</button>
+                <button class="btn btn-primary active">Choose Plan</button>
               </div>
             </div>
           </div>
@@ -1017,7 +1039,7 @@
           <div class="col-lg-3 col-sm-6 col-12 pb-4">
             <div class="pricing-detail py-5 text-center">
               <div class="pricing-content">
-                <h5>Business</h5>
+                <h5>Pro</h5>
                 <div class="content monthly pt-2">
                   <h3>$70.50</h3>
                 </div>
@@ -1025,19 +1047,19 @@
                   <h3>$840.30</h3>
                 </div>
 
-                <div class="pt-4">
-                  <p>✓ Carburant plein</p>
-                  <p>✓ Siège bébé / réhausseur</p>
+                <div class="pt-4 pricing-plan">
+                  <p>✓ Full fuel</p>
+                  <p>✓ Baby seat / booster seat</p>
                   <p>✓ GPS</p>
-                  <p>✓ Assurance collision/Vol</p>
-                  <p>✓ Chauffeur</p>
+                  <p>✓ Collision/Theft Insurance</p>
+                  <p>✓ Driver</p>
                   <p>✓ Pocket Wifi</p>
                   <p>✓ Fly & drive</p>
                 </div>
               </div>
 
               <div class="pricing-button">
-                <button class="btn btn-primary">Choisir ce plan</button>
+                <button class="btn btn-primary">Choose Plan</button>
               </div>
             </div>
           </div>
@@ -1051,17 +1073,15 @@
         <div class="row py-5">
           <div class="pb-5 col-10 col-sm-8 col-lg-6">
             <h2 class="">
-              Choisir
-              <span class="text-primary">Les meilleurs services</span> que vous
-              avez besoin.
+              See <span class="text-primary">best services</span> for your
+              solution
             </h2>
           </div>
           <div class="pb-5 col-lg-6">
             <p class="pt-4">
-              “Choisissez parmi nos services pour répondre à vos besoins. Que
-              vous recherchiez une voiture économique, spacieuse ou de luxe,
-              nous sommes là pour vous offrir une expérience de location
-              exceptionnelle !” 😊
+              “Choose from our services to meet your needs. Whether you are
+              looking for an economical, spacious or luxury car, we are here to
+              provide you with an exceptional rental experience!” 😊
             </p>
           </div>
         </div>
@@ -1076,10 +1096,10 @@
               <iconify-icon
                 class="services-icon my-2"
                 icon="solar:shield-check-outline"></iconify-icon>
-              <h5>PAIEMENT SÉCURISÉ</h5>
+              <h5>Secured Payment</h5>
               <p>
-                Nous vous offrons un processus de paiement sécurisé pour toutes
-                vos transactions. Vos informations personnelles sont protégées.
+                We offer you a secure payment process for all your transactions.
+                Your personal information is protected.
               </p>
             </div>
           </div>
@@ -1088,10 +1108,10 @@
               <iconify-icon
                 class="services-icon my-2"
                 icon="solar:bookmark-opened-outline"></iconify-icon>
-              <h5>Tout classes de véhicules</h5>
+              <h5>any class vehicle</h5>
               <p>
-                Quelle que soit votre préférence, nous avons une large gamme de
-                véhicules disponibles. Des économiques aux luxueuses.
+                Whatever your preference, we have a wide range of vehicles
+                available. From economical to luxurious.
               </p>
             </div>
           </div>
@@ -1100,11 +1120,10 @@
               <iconify-icon
                 class="services-icon my-2"
                 icon="solar:user-circle-outline"></iconify-icon>
-              <h5>Options D’autopartage</h5>
+              <h5>Car sharing options</h5>
               <p>
-                Vous pouvez partager votre voiture avec d’autres utilisateurs
-                lorsque vous ne l’utilisez pas. C’est pratique, économique et
-                écologique !
+                You can share your car with other users when you are not using
+                it. It’s practical, economical and ecological!
               </p>
             </div>
           </div>
@@ -1113,11 +1132,10 @@
               <iconify-icon
                 class="services-icon my-2"
                 icon="solar:call-chat-outline"></iconify-icon>
-              <h5>Centre d’aide et support</h5>
+              <h5>Help center & Support</h5>
               <p>
-                Notre équipe est là pour répondre à toutes vos questions et vous
-                aider en cas de besoin. Contactez-nous pour une assistance
-                rapide et efficace.
+                Our team is here to answer all your questions and help you if
+                needed. Contact us for fast assistance.
               </p>
             </div>
           </div>
@@ -1129,7 +1147,7 @@
     <section id="faq">
       <div class="container my-5 py-5">
         <h2 class="text-center my-5">
-          Nous répondons à vos <span class="text-primary"> questions</span>
+          We’ve got <span class="text-primary"> answers</span>
         </h2>
 
         <div
@@ -1144,7 +1162,7 @@
                 data-bs-target="#panelsStayOpen-collapseOne"
                 aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne">
-                Pourquoi choisir Nos services ?
+                Why to believe with GoCar Car rental service ?
               </button>
             </h5>
             <div
@@ -1152,24 +1170,22 @@
               class="accordion-collapse collapse show">
               <div class="accordion-body">
                 <p>
-                  GoCarTunisia est un choix idéal pour plusieurs raisons :
-
+                  GoCarTunisia is an ideal choice for several reasons:
                   <li>
-                    Flotte variée : Nous proposons une large gamme de véhicules,
-                    des économiques aux luxueux, pour répondre à tous les
-                    besoins.
+                    Varied fleet: We offer a wide range of vehicles, from
+                    economical to luxurious, to meet all needs. needs.
                   </li>
                   <li>
-                    Tarifs compétitifs : Nos prix sont concurrentiels et
-                    transparents.
+                    Competitive pricing: Our prices are competitive and
+                    transparent.
                   </li>
                   <li>
-                    Service client de qualité : Notre équipe est disponible pour
-                    vous aider à tout moment.
+                    Quality customer service: Our team is available to help you
+                    at any time.
                   </li>
                   <li>
-                    Options flexibles : Choisissez parmi nos forfaits
-                    kilométriques et options de restitution.
+                    Flexible options: Choose from our mileage packages and
+                    return options.
                   </li>
                 </p>
               </div>
@@ -1185,7 +1201,7 @@
                 data-bs-target="#panelsStayOpen-collapseTwo"
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo">
-                Comment savoir quel prix de location est le meilleur ?
+                How to know which renting price price is best?
               </button>
             </h2>
             <div
@@ -1194,15 +1210,13 @@
               aria-labelledby="panelsStayOpen-headingTwo">
               <div class="accordion-body">
                 <p>
+                  <li>Compare prices between different rental agencies.</li>
                   <li>
-                    Comparez les tarifs entre différentes agences de location.
+                    Consider the vehicle type, mileage included and additional
+                    options.
                   </li>
                   <li>
-                    Tenez compte du type de véhicule, du kilométrage inclus et
-                    des options supplémentaires.
-                  </li>
-                  <li>
-                    Pensez à vos besoins spécifiques (court terme, long terme,
+                    Think about your specific needs (short term, long term,
                     etc.).
                   </li>
                 </p>
@@ -1219,7 +1233,7 @@
                 data-bs-target="#panelsStayOpen-collapseThree"
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree">
-                Particularités de GoCarTunisia
+                What are the special features of GoCarTunisia?
               </button>
             </h2>
             <div
@@ -1228,18 +1242,11 @@
               aria-labelledby="panelsStayOpen-headingThree">
               <div class="accordion-body">
                 <p>
-                  <li>Paiement sécurisé : Vos transactions sont protégées.</li>
+                  <li>Secure payment: Your transactions are protected.</li>
+                  <li>All vehicle classes: Choose the one that suits you.</li>
+                  <li>Car sharing options: Share your car with other users.</li>
                   <li>
-                    Toutes classes de véhicules : Choisissez celui qui vous
-                    convient.
-                  </li>
-                  <li>
-                    Options d’autopartage : Partagez votre voiture avec d’autres
-                    utilisateurs.
-                  </li>
-                  <li>
-                    Centre d’aide et support : Notre équipe est là pour vous
-                    assister.
+                    Help and support center: Our team is here to assist you.
                   </li>
                 </p>
               </div>
@@ -1255,10 +1262,8 @@
       <div class="container py-5 my-5">
         <div class="row py-5">
           <div class="pt-3 col-10 col-sm-8 col-lg-5">
-            <h2 class="">
-              NOS <span class="text-primary">ARTICLES RÉCENTS</span>
-            </h2>
-            <a href="blog.html" class="btn btn-primary mt-4">Lire Articles </a>
+            <h2 class="">Our <span class="text-primary">Recent Posts</span></h2>
+            <a href="blog.html" class="btn btn-primary mt-4">Read Blogs </a>
           </div>
           <div class="mt-5 mt-lg-0 col-lg-7">
             <div class="pt-3 d-flex">
@@ -1269,9 +1274,9 @@
                 </h3>
               </div>
               <div class="ms-5">
-                <p>Conseils</p>
+                <p>Tips</p>
                 <a href="single-post.html" class="blog-title"
-                  >Services de location de voitures les plus sûrs en 2023</a
+                  >Safest car rental services in 2023</a
                 >
               </div>
             </div>
@@ -1286,7 +1291,7 @@
               <div class="ms-5">
                 <p>Rental</p>
                 <a href="single-post.html" class="blog-title"
-                  >Meilleure collection de voitures au monde</a
+                  >Best car collection in the world</a
                 >
               </div>
             </div>
@@ -1301,7 +1306,7 @@
               <div class="ms-5">
                 <p>Tricks</p>
                 <a href="single-post.html" class="blog-title"
-                  >Quelle voiture est la meilleure pour voyager</a
+                  >Which car is the best for travel</a
                 >
               </div>
             </div>
@@ -1322,21 +1327,18 @@
           <div class="col-10 col-sm-8 col-lg-6">
             <h2 class="">
               Let’s begin with
-              <span class="text-primary">GoCarTunisia </span>rental.
+              <span class="text-primary">GoCarTunisia rental.</span>
             </h2>
           </div>
           <div class="col-lg-6">
             <p>
-              “Commencez votre aventure avec
-              <span class="text-primary">GoCarTunisia </span>! Notre service de
-              location de voitures vous offre une expérience sans tracas. Que
-              vous voyagiez pour les affaires ou le plaisir, nous avons le
-              véhicule parfait pour vous. Cliquez sur le bouton "Contactez Nous"
-              pour réserver dès maintenant !” 😊
+              “Start your adventure with
+              <span class="text-primary">GoCarTunisia </span>! Our service car
+              rental offers you a hassle-free experience. That you are traveling
+              for business or pleasure, we have the perfect vehicle for you.
+              Click on the Contact us button to book now!” 😊
             </p>
-            <a href="contact.html" class="btn btn-primary mt-2"
-              >Contactez Nous</a
-            >
+            <a href="contact.html" class="btn btn-primary mt-2">Contact us </a>
           </div>
         </div>
       </div>
@@ -1348,7 +1350,7 @@
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
           <div class="col-md-4 mt-5 mt-md-0">
             <img src="../images/logo.png" alt="image" />
-            <p class="py-3">Votre route est notre passion ! 😊</p>
+            <p class="py-3">Your road is our passion! 😊</p>
             <div class="d-flex align-items-center">
               <a href="#" target="_blank"
                 ><iconify-icon
@@ -1381,18 +1383,16 @@
           <div class="col-md-7 offset-md-1 mt-5">
             <ul class="footer-nav list-unstyled">
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" aria-current="page" href="#"
-                  >Accueil</a
-                >
+                <a class="nav-link px-4" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" href="#">Réservation</a>
+                <a class="nav-link px-4" href="#">Booking</a>
               </li>
               <li class="nav-item me-2 mb-3">
                 <a class="nav-link px-4" href="#">About</a>
               </li>
               <li class="nav-item me-2 mb-3">
-                <a class="nav-link px-4" href="#rental">Voitures</a>
+                <a class="nav-link px-4" href="#rental">Cars</a>
               </li>
               <li class="nav-item me-2 mb-3">
                 <a class="nav-link px-4" href="#services">Services</a>
@@ -1409,21 +1409,11 @@
         class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
 
       <div class="container">
-        <footer
-          class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
-          <div class="col-md-6 d-flex align-items-center">
-            <p>© 2024 GoCarTunisia - All rights reserved</p>
+        <footer class="">
+          <div class="col-12 text-center p-3">
+            <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
           </div>
-          <div class="col-md-6 d-flex align-items-center justify-content-end">
-            <p class="">
-              © 2023 created By:<a
-                href="#"
-                class="website-link"
-                target="_blank">
-                <b><u>NouriWebDev</u></b></a
-              >
-            </p>
-          </div>
+      
         </footer>
       </div>
     </section>

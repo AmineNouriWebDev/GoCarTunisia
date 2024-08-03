@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCarTunisia</title>
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Style Sheet ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- script ================================================== -->
+    <script src="../../js/modernizr.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="../../images/logo.png" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#rental">Voitures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#pricing">prix</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#action">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="color: var(--link-color)">
+                                <i class="bi-translate"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./en/index.html">
+                                        <img src="https://flagcdn.com/16x12/gb.png" /> English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./ar/index.html">
+                                        <img src="https://flagcdn.com/16x12/tn.png" /> العربية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center">
+                        <ul class="navbar-nav justify-content-end align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    se connecter
+                                </a>
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="tabs-listing">
+                                                <nav>
+                                                    <div class="nav nav-tabs d-flex justify-content-center border-0"
+                                                        id="nav-tab" role="tablist">
+                                                        <button
+                                                            class="btn btn-outline-primary text-uppercase me-3 active"
+                                                            id="nav-sign-in-tab" data-bs-toggle="tab"
+                                                            data-bs-target="#nav-sign-in" type="button" role="tab"
+                                                            aria-controls="nav-sign-in" aria-selected="true">
+                                                            se connecter
+                                                        </button>
+                                                        <button class="btn btn-outline-primary text-uppercase"
+                                                            id="nav-register-tab" data-bs-toggle="tab"
+                                                            data-bs-target="#nav-register" type="button" role="tab"
+                                                            aria-controls="nav-register" aria-selected="false">
+                                                            S’enregistrer
+                                                        </button>
+                                                    </div>
+                                                </nav>
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <div class="tab-pane fade active show" id="nav-sign-in"
+                                                        role="tabpanel" aria-labelledby="nav-sign-in-tab">
+                                                        <form id="form1" class="form-group flex-wrap p-3">
+                                                            <div class="form-input col-lg-12 my-4">
+                                                                <label for="exampleInputEmail1"
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Votre
+                                                                    Adresse E-mail</label>
+                                                                <input type="text" id="exampleInputEmail1" name="email"
+                                                                    placeholder="Email" class="form-control ps-3" />
+                                                            </div>
+                                                            <div class="form-input col-lg-12 my-4">
+                                                                <label for="inputPassword1"
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Votre
+                                                                    Mot de Passe</label>
+                                                                <input type="password" id="inputPassword1"
+                                                                    placeholder="Mot de passe" class="form-control ps-3"
+                                                                    aria-describedby="passwordHelpBlock" />
+                                                                <div id="passwordHelpBlock"
+                                                                    class="form-text text-center">
+                                                                    <a href="#" class="password">Mot de passe oublié
+                                                                        ?</a>
+                                                                </div>
+                                                            </div>
+                                                            <label class="py-3">
+                                                                <input type="checkbox" required="" class="d-inline" />
+                                                                <span class="label-body text-black">Se souvenir de
+                                                                    moi</span>
+                                                            </label>
+                                                            <div class="d-grid my-3">
+                                                                <button
+                                                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                                                    Se connecter
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="nav-register" role="tabpanel"
+                                                        aria-labelledby="nav-register-tab">
+                                                        <form id="form2" class="form-group flex-wrap p-3">
+                                                            <div class="form-input col-lg-12 my-4">
+                                                                <label for="exampleInputEmail2"
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Adresse
+                                                                    Email
+                                                                </label>
+                                                                <input type="text" id="exampleInputEmail2" name="email"
+                                                                    placeholder="Email" class="form-control ps-3" />
+                                                            </div>
+                                                            <div class="form-input col-lg-12 my-4">
+                                                                <label for="inputPassword2"
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Mot
+                                                                    de passe</label>
+                                                                <input type="password" id="inputPassword2"
+                                                                    placeholder="Mot de passe" class="form-control ps-3"
+                                                                    aria-describedby="passwordHelpBlock" />
+                                                            </div>
+                                                            <label class="py-3">
+                                                                <input type="checkbox" required="" class="d-inline" />
+                                                                <span class="label-body text-black">J'accepte la
+                                                                    <a href="#"
+                                                                        class="text-black password border-bottom">Politique
+                                                                        de confidentialité</a>
+                                                                </span>
+                                                            </label>
+                                                            <div class="d-grid my-3">
+                                                                <button
+                                                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                                                    S'enregistrer
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <button type="button" class="btn btn-outline-primary nav-button mx-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            S'enregistrer
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="tabs-listing">
+                                            <nav>
+                                                <div class="nav nav-tabs d-flex justify-content-center border-0"
+                                                    id="nav-tab2" role="tablist">
+                                                    <button class="btn btn-outline-primary text-uppercase me-4"
+                                                        id="nav-sign-in-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#nav-sign-in2" type="button" role="tab"
+                                                        aria-controls="nav-sign-in2" aria-selected="false">
+                                                        Se Connecter
+                                                    </button>
+                                                    <button class="btn btn-outline-primary text-uppercase active"
+                                                        id="nav-register-tab2" data-bs-toggle="tab"
+                                                        data-bs-target="#nav-register2" type="button" role="tab"
+                                                        aria-controls="nav-register2" aria-selected="true">
+                                                        S'enregistrer
+                                                    </button>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content" id="nav-tabContent1">
+                                                <div class="tab-pane fade" id="nav-sign-in2" role="tabpanel"
+                                                    aria-labelledby="nav-sign-in-tab2">
+                                                    <form id="form3" class="form-group flex-wrap p-3">
+                                                        <div class="form-input col-lg-12 my-4">
+                                                            <label for="exampleInputEmail3"
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse
+                                                                Email
+                                                            </label>
+                                                            <input type="text" id="exampleInputEmail3" name="email"
+                                                                placeholder="Email" class="form-control ps-3" />
+                                                        </div>
+                                                        <div class="form-input col-lg-12 my-4">
+                                                            <label for="inputPassword3"
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Mot
+                                                                de Passe</label>
+                                                            <input type="password" id="inputPassword3"
+                                                                placeholder="Mot de passe" class="form-control ps-3"
+                                                                aria-describedby="passwordHelpBlock" />
+                                                            <div id="passwordHelpBlock2" class="form-text text-center">
+                                                                <a href="#" class="password">Mot de passe oublié ?</a>
+                                                            </div>
+                                                        </div>
+                                                        <label class="py-3">
+                                                            <input type="checkbox" required="" class="d-inline" />
+                                                            <span class="label-body text-black">Se souvenir de
+                                                                moi</span>
+                                                        </label>
+                                                        <div class="d-grid my-3">
+                                                            <button
+                                                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                                                Se Connecter
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane fade active show" id="nav-register2"
+                                                    role="tabpanel" aria-labelledby="nav-register-tab2">
+                                                    <form id="form4" class="form-group flex-wrap p-3">
+                                                        <div class="form-input col-lg-12 my-4">
+                                                            <label for="exampleInputEmail4"
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse
+                                                                Email
+                                                            </label>
+                                                            <input type="text" id="exampleInputEmail4" name="email"
+                                                                placeholder="Email" class="form-control ps-3" />
+                                                        </div>
+                                                        <div class="form-input col-lg-12 my-4">
+                                                            <label for="inputPassword4"
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Password</label>
+                                                            <input type="password" id="inputPassword4"
+                                                                placeholder="Mot de passe" class="form-control ps-3"
+                                                                aria-describedby="passwordHelpBlock" />
+                                                        </div>
+                                                        <label class="py-3">
+                                                            <input type="checkbox" required="" class="d-inline" />
+                                                            <span class="label-body text-black">J'accepte la
+                                                                <a href="#"
+                                                                    class="text-black password border-bottom">Politique
+                                                                    de confidentalité</a>
+                                                            </span>
+                                                        </label>
+                                                        <div class="d-grid my-3">
+                                                            <button
+                                                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                                                S'enregistrer
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- section -->
+
+  
+
+<section class="py-md-5">
+    <div class="container" id="contact">
+        <div class="d-md-flex bord-1">
+            <h2 class="text-primary mt-5"> Conditions de location de voiture en Tunisie chez GoCarTunisia </h2>
+        </div>
+        <!--  <p class="pl-3"> </p> -->
+        <div class="mt-3">
+            <p>GoCarTunisia, ci-apr&egrave;s d&eacute;nomm&eacute; le loueur loue &agrave; un client ci-apr&egrave;s
+                d&eacute;nomm&eacute; le locataire le v&eacute;hicule mentionn&eacute; au recto, suivant les clauses et
+                conditions ci-apr&egrave;s que le locataire accepte sans r&eacute;serve.&nbsp;</p>
+
+            <h4>Article 1 &ndash; UTILISATION DE LA VOITURE</h4>
+
+            <p>D&egrave;s remise du v&eacute;hicule, le locataire et les conducteurs autoris&eacute;s en deviennent
+                enti&egrave;rement responsables selon les termes fix&eacute;s &agrave; l&rsquo;article du Code Civil. Le
+                locataire s&rsquo;interdit de participer &agrave; tout match, course, concours, rallye, ou toutes autres
+                comp&eacute;titions de quelque nature que ce soit, ainsi qu&rsquo;&agrave; des essais ou
+                pr&eacute;parations. Il s&rsquo;engage &agrave; ne pas utiliser la voiture &agrave; des fins illicites
+                ou autres que celles pr&eacute;vues par le Constructeur. Le locataire s&rsquo;engage &agrave; chaque
+                arr&ecirc;t d&rsquo;utiliser les syst&egrave;mes de commande de fermeture et de protection.</p>
+
+            <h4>Article 2 &ndash; ZONE D&#39;UTILISATION</h4>
+
+            <p>La R&eacute;publique Tunisienne, aucun v&eacute;hicule ne doit sortir du territoire de la
+                r&eacute;publique tunisienne.</p>
+
+            <p>Le locataire s&rsquo;engage &agrave; ce que le v&eacute;hicule ne soit pas utilis&eacute; ou conduit hors
+                de la zone pr&eacute;vue au contrat sans le consentement pr&eacute;alable du loueur.<br />
+                <br />
+                Les cons&eacute;quences dommageables qui r&eacute;sulteraient de la circulation du v&eacute;hicule en
+                dehors de la zone d&eacute;clar&eacute;e seraient enti&egrave;rement &agrave; la charge du locataire
+                sans que celui-ci puisse pr&eacute;tendre au b&eacute;n&eacute;fice des garanties du loueur, notamment
+                pour la r&eacute;duction de franchise.
+            </p>
+
+            <h4>Article 3 &ndash; ETAT DU VEHICULE</h4>
+
+            <p>Le v&eacute;hicule est livr&eacute; en bon &eacute;tat de marche et de carrosserie avec clefs et
+                documents de bord et pneumatiques en bon &eacute;tat, roue de secours et accessoires normaux. En signant
+                le contrat, le locataire agr&eacute;e le v&eacute;hicule dans l&rsquo;&eacute;tat ou il se trouve et
+                s&rsquo;oblige &agrave; le restituer dans le m&ecirc;me &eacute;tat de marche et de carrosserie avec les
+                pneumatiques, roue de secours et accessoires en bon &eacute;tat. Le locataire s&rsquo;interdit de
+                r&eacute;clamer une indemnit&eacute; pour interruption de service, incident ou accident attribu&eacute;
+                &agrave; l&rsquo;&eacute;tat du v&eacute;hicule ou des pneumatiques. Le v&eacute;hicule est donn&eacute;
+                en parfait &eacute;tat de propret&eacute; lors de la restitution, celui-ci devra &ecirc;tre
+                restitu&eacute; dans le m&ecirc;me &eacute;tat. Dans le cas contraire les frais de nettoyage lui seront
+                factur&eacute;s. Les r&eacute;parations r&eacute;sultant d&rsquo;usure anormale, du gel, de la
+                n&eacute;gligence pour cause accidentelle ou ind&eacute;termin&eacute;e demeurent &agrave; la charge du
+                locataire &agrave; moins que ce dernier ne rapporte la preuve qu&rsquo;il n&rsquo;a commis de faute.</p>
+
+            <p>Le locataire reste responsable de toutes les pertes ou dommages non accident&eacute;s subis par le
+                v&eacute;hicule, les clefs et les documents de circulation, les pneus (aussi les crevaisons) les jantes,
+                les outils, instruments, accessoires, &eacute;quipements int&eacute;rieurs et ext&eacute;rieurs. Il
+                s&rsquo;engage &agrave; rembourser au loueur le montant total de tout dommage ou perte ainsi que les
+                frais d&rsquo;immobilisation du v&eacute;hicule. Le montant des r&eacute;parations sera payable sur
+                devis. Il est &agrave; noter que le loueur encaissera imm&eacute;diatement le pr&eacute;paiement.</p>
+
+            <h4>Article 4 &ndash; CONDITIONS REQUISES POUR LOUER</h4>
+
+            <p>Le ou les conducteur(s) doivent &ecirc;tre titulaire d&#39;un permis d&rsquo;au moins quatre ans et avoir
+                minimum trente ans.</p>
+
+            <h4>Article 5 &ndash; DUREE DU CONTRAT</h4>
+
+            <p>La location est consentie pour une dur&eacute;e d&eacute;termin&eacute;e selon le contrat.<br />
+                La location est personnelle et elle n&rsquo;est en aucun cas transmissible. Le locataire s&rsquo;engage
+                &agrave; ne pas laisser conduire la voiture par d&rsquo;autres personnes.</p>
+
+            <p>En cas de non restitution du v&eacute;hicule &agrave; l&rsquo;&eacute;ch&eacute;ance pr&eacute;vue
+                indiqu&eacute;e au recto, le loueur se r&eacute;serve le droit de reprendre le dit v&eacute;hicule en
+                quelque lieu que ce soit, aux frais exclusifs du locataire, sans que celui-ci puisse se pr&eacute;valoir
+                d&rsquo;une rupture abusive de cette location &agrave; son encontre.</p>
+
+            <p>En cas de prolongation, le locataire doit passer &agrave; l&rsquo;agence de d&eacute;part pour faire la
+                demande au loueur minimum 24 heures &agrave; l&rsquo;avance afin de faire prolonger le contrat et
+                r&eacute;gler l&rsquo;extension de la location en cas de d&eacute;passement de la dur&eacute;e sans
+                l&rsquo;accord du loueur, l&rsquo;assurance prendra fin aux date et heures pr&eacute;vues sur le
+                contrat. Le loueur se r&eacute;serve le droit de refuser toute demande de prolongation.</p>
+
+            <h4>Article 6 &ndash; MISE A DISPOSITION DU VEHICULE</h4>
+
+            <p>Le v&eacute;hicule est mis &agrave; disposition du locataire aux agences du loueur, il devra (sauf accord
+                express de ce dernier) &ecirc;tre restitu&eacute; au m&ecirc;me lieu.</p>
+
+            <p>Le v&eacute;hicule est livr&eacute; en parfait &eacute;tat. Un &eacute;tat contradictoire du
+                v&eacute;hicule sera effectu&eacute; et accept&eacute; par le locataire. Toute r&eacute;serve
+                &eacute;ventuelle est &agrave; formuler au moment de la prise en charge et doit &ecirc;tre
+                mentionn&eacute;e sur le contrat.</p>
+
+            <h4>Article 7 &ndash; RESTITUTION DU VEHICULE</h4>
+
+            <p>Le v&eacute;hicule doit &ecirc;tre restitu&eacute; &agrave; l&rsquo;agence de d&eacute;part (sauf accord
+                contraire).</p>
+
+            <p>La restitution doit &ecirc;tre faite aux jours et heures d&rsquo;ouverture de l&rsquo;agence. Les clefs
+                et documents du v&eacute;hicule doivent &ecirc;tre remis en mains propres au personnel du loueur. Le
+                locataire s&rsquo;engage &agrave; restituer le v&eacute;hicule dans l&rsquo;&eacute;tat ou il lui a
+                &eacute;t&eacute; d&eacute;livr&eacute;. Les dommages constat&eacute;s au retour seront &agrave; la
+                charge du locataire.</p>
+
+            <h4>Article 8 &ndash; GARDE ET UTILISATION</h4>
+
+            <p>Depuis la prise en charge jusqu&rsquo;&agrave; la restitution du v&eacute;hicule, le locataire en a la
+                ma&icirc;trise et l&rsquo;enti&egrave;re responsabilit&eacute;, qu&rsquo;il soit en circulation ou en
+                stationnement.</p>
+
+            <p>De fa&ccedil;on g&eacute;n&eacute;rale, le locataire s&rsquo;engage &agrave; utiliser le v&eacute;hicule
+                en bon p&egrave;re de famille et notamment :</p>
+
+            <ul>
+                <li>&agrave; laisser conduire que les conducteurs autoris&eacute;s dont le nom figure sur le contrat,
+                </li>
+                <li>&agrave; ne le conduire que sur des voies propres &agrave; la circulation,</li>
+                <li>&agrave; ne participer &agrave; aucune course, rallye, essais, pr&eacute;paration, ni aucune
+                    comp&eacute;tition de quelque nature que ce soit,</li>
+                <li>&agrave; ne pas l&rsquo;utiliser &agrave; des fins illicite ou immorales ou non pr&eacute;vues par
+                    le constructeur,</li>
+                <li>&agrave; ne pas l&rsquo;utiliser pour pousser, tirer ou remorquer un autre v&eacute;hicule
+                    (except&eacute; v&eacute;hicule de location muni d&rsquo;un &eacute;quipement sp&eacute;cial),</li>
+                <li>&agrave; ne pas le conduire sous l&rsquo;emprise d&rsquo;un &eacute;tat alcoolique ou sous
+                    l&rsquo;effet d&rsquo;&eacute;l&eacute;ments absorb&eacute;s qui modifient les r&eacute;flexes
+                    indispensables &agrave; la conduite,</li>
+                <li>&agrave; ne pas effectuer de transport de personnes ou de marchandises &agrave; titre on&eacute;reux
+                    (v&eacute;hicules utilitaires except&eacute;s),</li>
+                <li>&agrave; ne pas l&rsquo;utiliser pour des le&ccedil;ons de conduite,</li>
+                <li>&agrave; l&rsquo;utiliser conform&eacute;ment au code de la route, aux r&egrave;glements des douanes
+                    et de fa&ccedil;on g&eacute;n&eacute;rale aux dispositions l&eacute;gales et r&eacute;glementaires.
+                </li>
+            </ul>
+
+            <h4>Article 9 &ndash; CARBURANT, LUBRIFIANT</h4>
+
+            <p>Le carburant est toujours &agrave; la charge du locataire. Sauf stipulation contraire, le v&eacute;hicule
+                est livr&eacute; r&eacute;servoir demi plein et doit &ecirc;tre restitu&eacute; de m&ecirc;me. Si ce
+                n&rsquo;est pas le cas, le loueur rendra le service d&rsquo;effectuer le demi plein. Le carburant et le
+                prix du service feront l&rsquo;objet d&rsquo;une facturation selon le tarif en vigueur. Toutes pannes
+                d&eacute;coulant d&rsquo;un manque ou d&rsquo;une erreur de carburant ou de lubrifiant restent &agrave;
+                la charge du locataire. Le locataire doit v&eacute;rifier ses niveaux tous les 500 km. Celui-ci doit
+                v&eacute;rifier en permanence les niveaux d&rsquo;huile et d&rsquo;eau.</p>
+
+            <h4>Article 10 &ndash; REGLEMENT &ndash; pr&eacute;paiement &ndash; DEPOT DE GARANTIE</h4>
+
+            <p>Les montants de la location et du d&eacute;p&ocirc;t de garantie sont d&eacute;termin&eacute;s par les
+                tarifs en vigueur. Le locataire verse au loueur au moment de la prise en charge du v&eacute;hicule :</p>
+
+            <ul>
+                <li>le montant du d&eacute;p&ocirc;t de garantie demand&eacute;,</li>
+                <li>le co&ucirc;t estim&eacute; de la location, calcul&eacute; &agrave; partir du tarif journalier et de
+                    la dur&eacute;e pr&eacute;vue de la location.</li>
+            </ul>
+
+            <p>La location s&rsquo;entend par p&eacute;riodes de 24 heures. Le locataire b&eacute;n&eacute;ficie
+                d&rsquo;une franchise d&rsquo;une heure au terme de la location. Au-del&agrave;, une nouvelle
+                journ&eacute;e est factur&eacute;e.<br />
+                <br />
+                De convention expresse, le montant du d&eacute;p&ocirc;t de garantie indiqu&eacute; au recto est
+                attribu&eacute; au loueur en toute propri&eacute;t&eacute; &agrave; concurrence des sommes dues par le
+                locataire au loueur en cas :
+            </p>
+
+            <ul>
+                <li>de non paiement des loyers,</li>
+                <li>de dommages ou de perte du v&eacute;hicule selon les cas pr&eacute;vus,</li>
+                <li>de non restitution du v&eacute;hicule, sauf cas de force majeure et apr&egrave;s mise en demeure.
+                </li>
+            </ul>
+
+            <h4>Article 11 &ndash; ENTRETIEN &ndash; REPARATION</h4>
+
+            <p>Les r&eacute;parations &eacute;changent de pi&egrave;ces ou de pneumatiques r&eacute;sultant&nbsp; de
+                l&rsquo;usure normale sont &agrave; la charge du loueur : ceux r&eacute;sultant d&rsquo;usure anormale,
+                de n&eacute;gligence, de cause accidentelle ou ind&eacute;termin&eacute;e demeurent &agrave; la charge
+                du locataire et seront effectu&eacute;s sans d&eacute;lai par le loueur ; leur montant sera
+                augment&eacute; d&rsquo;une indemnit&eacute; d&rsquo;immobilisation. Dans l&rsquo;un et l&rsquo;autre
+                cas, si le v&eacute;hicule est immobilis&eacute; le locataire ne peut effectuer des travaux chez un
+                Agent Officiel de la marque du v&eacute;hicule, qu&rsquo;apr&egrave;s accord &eacute;crit du loueur, et
+                doit se faire remettre une facture acquitt&eacute;e ainsi que les pi&egrave;ces d&eacute;fectueuses
+                remplac&eacute;es.</p>
+
+            <h4>Article 12 &ndash; ASSURANCES</h4>
+
+            <h5>L&#39;assurance GoCarTunisia est <strong>une assurance&nbsp;aux tiers</strong>.</h5>
+
+            <h4>Dur&eacute;e de l&#39;assurance:</h4>
+
+            <p>L&#39;assurance n&#39;est valable que pour la p&eacute;riode de location et de prolongation.</p>
+
+            <h4>Le locataire est garanti pour les risques suivants:</h4>
+
+            <ul>
+                <li>Pour une somme illimit&eacute;e pour les accidents caus&eacute;s aux gens qui sont dans le
+                    v&eacute;hicule de location &agrave; titre gracieux,</li>
+                <li>Contre l&#39;incendie du v&eacute;hicule sauf n&eacute;gligence grave du locataire,</li>
+                <li>Contre le vol de la voiture sauf n&eacute;gligence du locataire,</li>
+                <li>Contre les accidents routiers,&nbsp;<strong>non reponsables</strong>, avec une n&eacute;gligence
+                    &eacute;gale &agrave; 4% de la valeur qui est &agrave; la charge du locataire.</li>
+            </ul>
+
+            <h4>L&#39;assurance ne couvre pas les points suivants:</h4>
+
+            <p>Le locataire sera redevable du montant des r&eacute;parations, ou de la valeur v&eacute;nale du
+                v&eacute;hicule dans les cas suivants :</p>
+
+            <ul>
+                <li>Conduite du v&eacute;hicule par une personne dont le nom ne figure pas sur le pr&eacute;sent contrat
+                    en qualit&eacute; de conducteur autoris&eacute;,</li>
+                <li>Dommages caus&eacute;s en l&rsquo;absence de tiers identifi&eacute; ou qui <strong>a pris la
+                        fuite</strong>, ou &agrave; la suite d&rsquo;une faute inexcusable, ou &agrave; la suite
+                    d&rsquo;une n&eacute;gligence caract&eacute;ris&eacute;e : ex :
+                    <strong>d&eacute;rapage</strong>,&nbsp;<strong>franchissement de ligne continue</strong>,
+                    <strong>non respect de la vitesse, collision par derri&egrave;re, non respect de la
+                        priorit&eacute;.</strong></li>
+                <li>L&#39;assurance&nbsp;n&#39;inclue pas les dommages caus&eacute;s aux <strong>phares</strong>,
+                    <strong>feux</strong>, <strong>r&eacute;troviseurs</strong>, <strong>lunette
+                        arri&egrave;re</strong>, <strong>pare-brise</strong>, <strong>pare-chocs</strong> avant et
+                    arri&egrave;re, <strong>peinture de la voiture</strong> et toute perte d&#39;&eacute;quipements,
+                    <strong>papiers</strong>, <strong>clefs</strong> et le remorquage en cas d&#39;accident sont
+                    &agrave; la charge du client.</li>
+                <li>Tous dommages r&eacute;sultant d&rsquo;une mauvaise appr&eacute;ciation du gabarit du
+                    v&eacute;hicule lou&eacute; (exemple : haut de toit, orni&egrave;re, frottement lat&eacute;ral de la
+                    carrosserie).</li>
+                <li>Conduite avec un taux d&rsquo;alcool&eacute;mie sup&eacute;rieur &agrave; la norme l&eacute;gale ou
+                    sous l&rsquo;effet d&rsquo;&eacute;l&eacute;ments absorb&eacute;s qui modifient les r&eacute;flexes
+                    indispensables &agrave; la conduite,</li>
+                <li>Assoupissement et endormissement du locataire,</li>
+                <li>D&eacute;gradations &agrave; l&rsquo;int&eacute;rieur du v&eacute;hicule, aux pneus et jantes, sauf
+                    &agrave; prouver qu&rsquo;ils ne sont pas &agrave; la cons&eacute;quence de sa faute ou de sa
+                    n&eacute;gligence.</li>
+                <li>Erreur sur le type de carburant,</li>
+                <li>La collision avec un <strong>obstacle fixe ou mobile</strong> (ex: panneau de signalisation,&nbsp;un
+                    animal ou un pi&eacute;tant...),</li>
+                <li>La non restitution des clefs et des papiers du v&eacute;hicule exclut la garantie vol,</li>
+                <li>Dommages survenus sur chantier, voie priv&eacute;e et voie ferm&eacute;e &agrave; la circulation,
+                </li>
+                <li>Dommages survenue apr&egrave;s la date pr&eacute;vue au contrat pour le retour du v&eacute;hicule,
+                </li>
+                <li>Dommages survenus avec un autre v&eacute;hicule de la Soci&eacute;t&eacute; GoCarTunisia.</li>
+                <li>Dommages survenus avec un v&eacute;hicule immatricul&eacute; au nom du locataire ou de ses filiales,
+                </li>
+                <li>Vol par un pr&eacute;pos&eacute; du locataire, ou un conducteur autoris&eacute;,</li>
+                <li>Les effets personnels et marchandises,</li>
+                <li>D&eacute;claration parvenue apr&egrave;s la restitution du v&eacute;hicule.</li>
+            </ul>
+
+            <p>D&eacute;claration : en cas d&rsquo;accident, une d&eacute;claration compl&egrave;te doit parvenir sous
+                24 heures au loueur en recommand&eacute; avec accus&eacute; de r&eacute;ception. Cette
+                d&eacute;claration devra comporter obligatoirement les circonstances, la date et l&rsquo;heure, le lieu,
+                le num&eacute;ro de l&rsquo;Agent, un constat de la Police ou de la Garde nationale, les noms et
+                adresses des t&eacute;moins, ainsi que les renseignements sur l&rsquo;adversaire. Il ne devra en aucun
+                cas discuter de la responsabilit&eacute;, ni traiter ou transiger avec des tiers relativement &agrave;
+                l&rsquo;accident. Le locataire s&rsquo;engage &agrave; communiquer imm&eacute;diatement au loueur toutes
+                pi&egrave;ces re&ccedil;ues &agrave; la suite d&rsquo;un accident et tous renseignements utiles.</p>
+
+            <h4>Article 13 &ndash; VEHICULES UTILITAIRES (REGLES PARTICULIERES)</h4>
+
+            <p>Outre les obligations pr&eacute;vues au pr&eacute;sent contrat, le locataire :</p>
+
+            <ul>
+                <li>assume la ma&icirc;trise des op&eacute;rations de conduite et de transport,</li>
+                <li>s&rsquo;engage &agrave; ne transporter dans le v&eacute;hicule que des marchandises conformes
+                    &agrave; l&rsquo;usage auquel il est affect&eacute;,</li>
+                <li>s&rsquo;interdit de charger des mat&eacute;riaux susceptibles de d&eacute;t&eacute;riorer le
+                    v&eacute;hicule ou d&rsquo;y laisser des impr&eacute;gnations persistantes, tant par eux-m&ecirc;mes
+                    que par leur emballage ou arrimage,</li>
+                <li>s&rsquo;engage &agrave; n&rsquo;utiliser le v&eacute;hicule que sur les aires de roulage pour
+                    lesquelles il a &eacute;t&eacute; con&ccedil;u,</li>
+                <li>se reconna&icirc;t responsable des d&eacute;gradations subies par le v&eacute;hicule, ses
+                    &eacute;quipements ou ses accessoires du fait du chargement ou du d&eacute;chargement,</li>
+                <li>sera responsable des cons&eacute;quences de tout d&eacute;passement du poids total roulant du
+                    v&eacute;hicule ou du nombre de personnes autoris&eacute;es indiqu&eacute; sur la carte grise,</li>
+                <li>restituera le v&eacute;hicule vide de tout emballage ou de marchandise.</li>
+            </ul>
+
+            <h4>Article 14 &ndash; PAPIERS DE LA VOITURE</h4>
+
+            <p>Le locataire remettra au loueur, d&egrave;s le retour de la voiture, tous les titres de circulation
+                aff&eacute;rents &agrave; cette derni&egrave;re ; faute de quoi, la location continuera de lui
+                &ecirc;tre factur&eacute;e au prix initial, jusqu&rsquo;&agrave; production d&rsquo;un certificat de
+                perte et r&egrave;glement des frais de duplicata.</p>
+
+            <h4>Article 15 &ndash; AMENDES, CONTRAVENTIONS</h4>
+
+            <p>Le locataire et le conducteur agr&eacute;&eacute; sont responsables des amendes,<span
+                    style="font-family:Arial,sans-serif; font-size:9pt">&nbsp;infractions d&rsquo;exc&egrave;s de
+                    vitesses, radars automatiques,&nbsp;</span>contraventions et proc&egrave;s-verbaux &eacute;tablis
+                &agrave; leur encontre et qui sont l&eacute;galement &agrave; leur charge. Ils s&rsquo;engagent &agrave;
+                rembourser au loueur tous les frais qui en r&eacute;sulteraient, y compris les frais de mise en
+                fourri&egrave;re, si celui-ci &eacute;tait amen&eacute; &agrave; en faire l&rsquo;avance.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <!-- Footer Section Starts -->
+    <section id="footer">
+        <div class="container footer-container mt-5">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+                <div class="col-md-4 mt-5 mt-md-0">
+                    <img src="../../images/logo.png" alt="image" />
+                    <p class="py-3">Votre route est notre passion ! 😊</p>
+                    <div class="d-flex align-items-center">
+                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                                icon="mdi:facebook"></iconify-icon></a>
+                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                                icon="mdi:twitter"></iconify-icon></a>
+                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                                icon="mdi:instagram"></iconify-icon></a>
+                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                                icon="mdi:linkedin"></iconify-icon></a>
+                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                                icon="mdi:youtube"></iconify-icon></a>
+                    </div>
+                </div>
+
+                <div class="col-md-7 offset-md-1 mt-5">
+                    <ul class="footer-nav list-unstyled">
+
+
+
+
+                        <li class="nav-item me-2 mb-3">
+                            <a class="nav-link px-4" href="./pages/fr/a-propos.html">A Propos</a>
+                        </li>
+                        <li class="nav-item me-2 mb-3">
+                            <a class="nav-link px-4" href="#services">Conditions</a>
+                        </li>
+                        <li class="nav-item me-2 mb-3">
+                            <a class="nav-link px-4" href="#services">Mentions Légales</a>
+                        </li>
+                        <li class="nav-item me-2 mb-3">
+                            <a class="nav-link px-4" href="#services">Charte Qualité</a>
+                        </li>
+
+                        <li class="nav-item me-2 mb-3">
+                            <a class="nav-link px-4" href="#action">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
+
+        <div class="container">
+            <footer class="">
+                <div class="col-12 text-center p-3">
+                    <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
+                </div>
+
+            </footer>
+        </div>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="../../js/plugins.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
