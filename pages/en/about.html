@@ -33,15 +33,14 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
-    <nav class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed ">
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="../../images/logo.png" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -50,23 +49,24 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active px-3" aria-current="page" href="../../index.html">Accueil</a>
+                            <a class="nav-link active px-3" aria-current="page" href="../../en/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="../../index.html#rental">Voitures</a>
+                            <a class="nav-link px-3" href="../../en/index.html#rental">Cars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="../../index.html#pricing">prix</a>
+                            <a class="nav-link px-3" href="../../en/index.html#pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="../../index.html#services">Services</a>
+                            <a class="nav-link px-3" href="../../en/index.html#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="../../index.html#blog">Blog</a>
+                            <a class="nav-link px-3" href="../../en/index.html#blog">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="../../index.html#action">Contact</a>
+                            <a class="nav-link px-3" href="../../en/index.html#action">Contact</a>
                         </li>
+             
                     </ul>
                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                         <div class="btn-group" role="group">
@@ -76,11 +76,11 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="./en/index.html">
-                                        <img src="https://flagcdn.com/16x12/gb.png" /> English</a>
+                                    <a class="dropdown-item" href="../index.html">
+                                        <img src="https://flagcdn.com/16x12/fr.png" /> Francais</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./ar/index.html">
+                                    <a class="dropdown-item" href="../ar/index.html">
                                         <img src="https://flagcdn.com/16x12/tn.png" /> العربية</a>
                                 </li>
                             </ul>
@@ -90,7 +90,7 @@
                         <ul class="navbar-nav justify-content-end align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    se connecter
+                                    Login
                                 </a>
                             </li>
                             <!-- Modal -->
@@ -107,54 +107,49 @@
                                                 <nav>
                                                     <div class="nav nav-tabs d-flex justify-content-center border-0"
                                                         id="nav-tab" role="tablist">
-                                                        <button
-                                                            class="btn btn-outline-primary text-uppercase me-3 active"
+                                                        <button class="btn btn-outline-primary text-uppercase me-3 active"
                                                             id="nav-sign-in-tab" data-bs-toggle="tab"
                                                             data-bs-target="#nav-sign-in" type="button" role="tab"
                                                             aria-controls="nav-sign-in" aria-selected="true">
-                                                            se connecter
+                                                            Log In
                                                         </button>
                                                         <button class="btn btn-outline-primary text-uppercase"
                                                             id="nav-register-tab" data-bs-toggle="tab"
                                                             data-bs-target="#nav-register" type="button" role="tab"
                                                             aria-controls="nav-register" aria-selected="false">
-                                                            S’enregistrer
+                                                            Sign Up
                                                         </button>
                                                     </div>
                                                 </nav>
                                                 <div class="tab-content" id="nav-tabContent">
-                                                    <div class="tab-pane fade active show" id="nav-sign-in"
-                                                        role="tabpanel" aria-labelledby="nav-sign-in-tab">
+                                                    <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
+                                                        aria-labelledby="nav-sign-in-tab">
                                                         <form id="form1" class="form-group flex-wrap p-3">
                                                             <div class="form-input col-lg-12 my-4">
                                                                 <label for="exampleInputEmail1"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Votre
-                                                                    Adresse E-mail</label>
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                                                    Address</label>
                                                                 <input type="text" id="exampleInputEmail1" name="email"
                                                                     placeholder="Email" class="form-control ps-3" />
                                                             </div>
                                                             <div class="form-input col-lg-12 my-4">
                                                                 <label for="inputPassword1"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Votre
-                                                                    Mot de Passe</label>
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Password</label>
                                                                 <input type="password" id="inputPassword1"
-                                                                    placeholder="Mot de passe" class="form-control ps-3"
+                                                                    placeholder="Password" class="form-control ps-3"
                                                                     aria-describedby="passwordHelpBlock" />
-                                                                <div id="passwordHelpBlock"
-                                                                    class="form-text text-center">
-                                                                    <a href="#" class="password">Mot de passe oublié
-                                                                        ?</a>
+                                                                <div id="passwordHelpBlock" class="form-text text-center">
+                                                                    <a href="#" class="password">Forgot Password ?</a>
                                                                 </div>
                                                             </div>
                                                             <label class="py-3">
                                                                 <input type="checkbox" required="" class="d-inline" />
-                                                                <span class="label-body text-black">Se souvenir de
-                                                                    moi</span>
+                                                                <span class="label-body text-black">Remember Me</span>
                                                             </label>
                                                             <div class="d-grid my-3">
                                                                 <button
                                                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                                                    Se connecter
+                                                                    Log In
                                                                 </button>
                                                             </div>
                                                         </form>
@@ -164,32 +159,30 @@
                                                         <form id="form2" class="form-group flex-wrap p-3">
                                                             <div class="form-input col-lg-12 my-4">
                                                                 <label for="exampleInputEmail2"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Adresse
-                                                                    Email
-                                                                </label>
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                                                    Address</label>
                                                                 <input type="text" id="exampleInputEmail2" name="email"
                                                                     placeholder="Email" class="form-control ps-3" />
                                                             </div>
                                                             <div class="form-input col-lg-12 my-4">
                                                                 <label for="inputPassword2"
-                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Mot
-                                                                    de passe</label>
+                                                                    class="form-label fs-6 text-uppercase fw-bold text-black">Password</label>
                                                                 <input type="password" id="inputPassword2"
-                                                                    placeholder="Mot de passe" class="form-control ps-3"
+                                                                    placeholder="Password" class="form-control ps-3"
                                                                     aria-describedby="passwordHelpBlock" />
                                                             </div>
                                                             <label class="py-3">
                                                                 <input type="checkbox" required="" class="d-inline" />
-                                                                <span class="label-body text-black">J'accepte la
+                                                                <span class="label-body text-black">I agree to the
                                                                     <a href="#"
-                                                                        class="text-black password border-bottom">Politique
-                                                                        de confidentialité</a>
+                                                                        class="text-black password border-bottom">Privacy
+                                                                        Policy</a>
                                                                 </span>
                                                             </label>
                                                             <div class="d-grid my-3">
                                                                 <button
                                                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                                                    S'enregistrer
+                                                                    Sign Up
                                                                 </button>
                                                             </div>
                                                         </form>
@@ -203,7 +196,7 @@
                         </ul>
                         <button type="button" class="btn btn-outline-primary nav-button mx-3" data-bs-toggle="modal"
                             data-bs-target="#exampleModal2">
-                            S'enregistrer
+                            Sign in
                         </button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -223,13 +216,13 @@
                                                         id="nav-sign-in-tab2" data-bs-toggle="tab"
                                                         data-bs-target="#nav-sign-in2" type="button" role="tab"
                                                         aria-controls="nav-sign-in2" aria-selected="false">
-                                                        Se Connecter
+                                                        Log In
                                                     </button>
                                                     <button class="btn btn-outline-primary text-uppercase active"
                                                         id="nav-register-tab2" data-bs-toggle="tab"
                                                         data-bs-target="#nav-register2" type="button" role="tab"
                                                         aria-controls="nav-register2" aria-selected="true">
-                                                        S'enregistrer
+                                                        Sign Up
                                                     </button>
                                                 </div>
                                             </nav>
@@ -239,44 +232,40 @@
                                                     <form id="form3" class="form-group flex-wrap p-3">
                                                         <div class="form-input col-lg-12 my-4">
                                                             <label for="exampleInputEmail3"
-                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse
-                                                                Email
-                                                            </label>
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                                                Address</label>
                                                             <input type="text" id="exampleInputEmail3" name="email"
                                                                 placeholder="Email" class="form-control ps-3" />
                                                         </div>
                                                         <div class="form-input col-lg-12 my-4">
                                                             <label for="inputPassword3"
-                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Mot
-                                                                de Passe</label>
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Password</label>
                                                             <input type="password" id="inputPassword3"
-                                                                placeholder="Mot de passe" class="form-control ps-3"
+                                                                placeholder="Password" class="form-control ps-3"
                                                                 aria-describedby="passwordHelpBlock" />
                                                             <div id="passwordHelpBlock2" class="form-text text-center">
-                                                                <a href="#" class="password">Mot de passe oublié ?</a>
+                                                                <a href="#" class="password">Forgot Password ?</a>
                                                             </div>
                                                         </div>
                                                         <label class="py-3">
                                                             <input type="checkbox" required="" class="d-inline" />
-                                                            <span class="label-body text-black">Se souvenir de
-                                                                moi</span>
+                                                            <span class="label-body text-black">Remember Me</span>
                                                         </label>
                                                         <div class="d-grid my-3">
                                                             <button
                                                                 class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                                                Se Connecter
+                                                                Log In
                                                             </button>
                                                         </div>
                                                     </form>
                                                 </div>
-                                                <div class="tab-pane fade active show" id="nav-register2"
-                                                    role="tabpanel" aria-labelledby="nav-register-tab2">
+                                                <div class="tab-pane fade active show" id="nav-register2" role="tabpanel"
+                                                    aria-labelledby="nav-register-tab2">
                                                     <form id="form4" class="form-group flex-wrap p-3">
                                                         <div class="form-input col-lg-12 my-4">
                                                             <label for="exampleInputEmail4"
-                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Addresse
-                                                                Email
-                                                            </label>
+                                                                class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                                                Address</label>
                                                             <input type="text" id="exampleInputEmail4" name="email"
                                                                 placeholder="Email" class="form-control ps-3" />
                                                         </div>
@@ -284,21 +273,21 @@
                                                             <label for="inputPassword4"
                                                                 class="form-label fs-6 text-uppercase fw-bold text-black">Password</label>
                                                             <input type="password" id="inputPassword4"
-                                                                placeholder="Mot de passe" class="form-control ps-3"
+                                                                placeholder="Password" class="form-control ps-3"
                                                                 aria-describedby="passwordHelpBlock" />
                                                         </div>
                                                         <label class="py-3">
                                                             <input type="checkbox" required="" class="d-inline" />
-                                                            <span class="label-body text-black">J'accepte la
+                                                            <span class="label-body text-black">I agree to the
                                                                 <a href="#"
-                                                                    class="text-black password border-bottom">Politique
-                                                                    de confidentalité</a>
+                                                                    class="text-black password border-bottom">Privacy
+                                                                    Policy</a>
                                                             </span>
                                                         </label>
                                                         <div class="d-grid my-3">
                                                             <button
                                                                 class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                                                S'enregistrer
+                                                                Sign Up
                                                             </button>
                                                         </div>
                                                     </form>
@@ -315,88 +304,77 @@
         </div>
     </nav>
 
-   
-<!-- section -->
 
-<section class="py-md-5">
-    <div class="container" id="contact">
-        <div class="d-md-flex bord-1">
-            <h2 class="text-primary mt-5"> À Propos </h2>
+    <!-- section -->
+
+    <section class="py-md-5">
+        <div class="container" id="contact">
+            <div class="d-md-flex bord-1">
+                <h2 class="text-primary mt-5">About Us</h2>
+            </div>
+            <!--  <p class="pl-3"> </p> -->
+            <div class="mt-3">
+                <h2><span style="font-size:22px">Presentation of our agency "GoCarTunisia"</span></h2>
+    
+                <p>GoCarTunisia is a Tunisian family-owned car rental company since Febrary 2023 with a capital of one hundred
+                    thousand dinars (200.000 Tunisian Dinar). The head office is located at Avenue Moncef Bey 8050 Hammamet, Yasmine
+                    Hammamet road.</p>
+    
+                <p>GoCarTunisia is committed to providing serious and professional service to its clients (individuals,
+                    tourists, and professionals), with recent and well-maintained vehicles available in various types,
+                    models, and categories. Experienced GoCarTunisia agents deliver the car to the agreed location and time,
+                    while keeping prices reasonable and competitive.</p>
+    
+                <p>Today, we lead the top tier of independent Tunisian car rental agencies. The GoCarTunisia agency is
+                    present at all Tunisian airports including Tunis Carthage Airport, Enfidha Airport, Monastir Airport,
+                    Sfax Airport, and Djerba Airport, as well as in all Tunisian cities including Tunis, Gammarth, La Marsa,
+                    Bizerte, Hammamet, Nabeul, Enfidha, Sousse, Monastir, Sfax, Djerba…</p>
+    
+                <p>We offer car rentals for short or long durations, and provide dedicated services to businesses where we
+                    handle fleet management, maintenance, and insurance.</p>
+    
+                <p>Thanks to our "GoCarTunisia at Home" service, the car is delivered to the client’s home, hotel, or place
+                    of residence.</p>
+    
+                <p>"Our job is always at your service!" We provide personalized advice to each of our clients. We listen to
+                    them to offer the best solution tailored to their needs. We distinguish ourselves from our competitors
+                    through our innovative products, personalized welcome, service quality, seriousness, and unmatched
+                    delivery.</p>
+    
+                <h2><span style="font-size:22px">Our Values&nbsp;</span></h2>
+    
+                <h3><span style="font-size:18px">Proximity</span></h3>
+    
+                <p>We build a relationship of trust and proximity with our clients. Customer Relationship is at the heart of
+                    our approach: "All our collaborators and agents love their clients; they consider them as partners."</p>
+    
+                <h3><span style="font-size:18px">Customer Satisfaction</span></h3>
+    
+                <p>We are available to our clients 24/7 and can provide a vehicle for every need, from one to a hundred
+                    vehicles for a client for a specified period. "There is a steering wheel for every client."</p>
+    
+                <h3><span style="font-size:18px">Innovation</span></h3>
+    
+                <p>We stand out from our competitors with our innovative ideas, with a strong desire to make constant and
+                    daily improvements. We always strive to offer innovative products. In recent years, we have launched
+                    luxury car rentals with a chauffeur, long-term rentals dedicated to businesses (LLD), and airport
+                    transfer and shuttle services.</p>
+    
+                <h3><span style="font-size:18px">Team Spirit</span></h3>
+    
+                <p>Our activity has tripled in size in one year rapidly thanks to our dedicated team. Our team is very
+                    attached to the "GoCarTunisia" brand and considers themselves as their own boss. Each person performs
+                    their task with maximum respect and seriousness.</p>
+    
+                <h3><span style="font-size:18px">Solidarity</span></h3>
+    
+                <p>GoCarTunisia is a human and family-oriented company. In this sense, we support several charitable
+                    associations and are partners with some sports teams to demonstrate our commitment in various Tunisian
+                    regions.</p>
+            </div>
         </div>
-        <!--  <p class="pl-3"> </p> -->
-        <div class="mt-3">
-            <h2><span style="font-size:22px">Pr&eacute;sentation de notre agence "GoCarTunisia"</span></h2>
+    </section>
 
-            <p>GoCarTunisia Tunisie est une soci&eacute;t&eacute; familiale de location de voitures tunisienne depuis
-                Avril 2007 avec un capital de cent milles dinars (200 000,000 DT), le si&egrave;ge social est
-                situ&eacute; &agrave; l&acute;avenue Moncef Bey 8050 Hammamet, route de Hammamet Yasmine.</p>
-
-            <p>GoCarTunisia  s&acute;engage &agrave; assurer un service s&eacute;rieux et professionnel &agrave; ses
-                clients (Particuliers, touristes et professionnels), des v&eacute;hicules r&eacute;cents et bien
-                entretenus r&eacute;partis sur plusieurs types, mod&egrave;les et cat&eacute;gories, des agents GoCarTunisia
-                exp&eacute;riment&eacute;s vous livrent la voiture &agrave; l&acute;endroit et &agrave; l&#39;heure
-                pr&eacute;vu, tout en gardant des prix raisonnables et comp&eacute;titifs.</p>
-
-            <p>Aujourd&rsquo;hui, &nbsp;nous dominons le peloton de t&ecirc;te, occupons le haut de l&rsquo;affiche des
-                loueurs ind&eacute;pendants tunisiens.<br />
-                L&rsquo;agence GoCarTunisia a entendu sa pr&eacute;sence sur tous les a&eacute;roports tunisiens comme
-                l&acute;a&eacute;roport de Tunis Carthage, a&eacute;roport Enfidha, a&eacute;roport Monastir,
-                a&eacute;roport Sfax et a&eacute;roport Djerba ainsi que notre pr&eacute;sence sur toutes villes
-                tunisiennes dont nous citons Tunis, Gammarth, La Marsa, Bizerte, Hammamet, Nabeul, Enfidha, Sousse,
-                Monastir, Sfax, Dejrba&hellip;</p>
-
-            <p>Notre fait la location de voiture pour courte ou longue dur&eacute;e, nous assurons un service
-                d&eacute;di&eacute; aux entreprises o&ugrave; nous nous occupons de la gestion du parc, de la
-                maintenance et de l&rsquo;assurance.</p>
-
-            <p>Gr&acirc;ce &agrave; notre service &laquo;GoCarTunisia &agrave; domicile&raquo;, la voiture est
-                achemin&eacute;e jusqu&rsquo;au client chez lui, &agrave; l&rsquo;h&ocirc;tel ou &agrave; son lieu de
-                r&eacute;sidence.</p>
-
-            <p>&laquo;Notre m&eacute;tier toujours &agrave; votre service&nbsp;!&raquo;. Nous apportons un conseil
-                personnalis&eacute; &agrave; chacun de nos clients. Nous sommes &agrave; leur &eacute;coute pour leur
-                apporter la meilleure solution adapt&eacute;e &agrave; leurs besoins. Nous nous d&eacute;marquons de nos
-                concurrents par nos produits novateurs, l&rsquo;accueil personnalis&eacute;, une mise &agrave;
-                disposition, qualit&eacute; du service, s&eacute;rieux et une livraison incomparable.</p>
-
-            <h2><span style="font-size:22px">Nos Valeurs&nbsp;</span></h2>
-
-            <h3><span style="font-size:18px">La Proximit&eacute;</span></h3>
-
-            <p>Il se passe une relation de confiance et de proximit&eacute; avec nos clients. La Relation Client est au
-                centre de notre d&eacute;marche&nbsp;: &laquo;Tous nos collaborateurs et agents aiment leurs clients,
-                ils les consid&egrave;rent comme des partenaires &raquo;.</p>
-
-            <h3><span style="font-size:18px">La Satisfaction client</span></h3>
-
-            <p>Nous sommes &agrave; l&rsquo;&eacute;coute de nos clients 24H/24 et nous sommes capable de mettre un
-                v&eacute;hicule en face de chaque besoin, de un &agrave; cent v&eacute;hicules pour un client &agrave;
-                une p&eacute;riode d&eacute;termin&eacute;e. &laquo;Il y a un volant pour chaque client &raquo;.</p>
-
-            <h3><span style="font-size:18px">L&rsquo;Innovation</span></h3>
-
-            <p>Nous nous d&eacute;marquons de nos concurrents par nos id&eacute;es novatrices, avec une forte
-                volont&eacute; de r&eacute;aliser des am&eacute;liorations constantes et quotidiennement. Nous cherchons
-                toujours &agrave; proposer des produits novateurs, ces derni&egrave;res ann&eacute;es nous avons
-                lanc&eacute; la location de voitures de luxe avec chauffeur, la location longue dur&eacute;e
-                d&eacute;di&eacute;e aux entreprises (LLD), le service des transferts et navettes a&eacute;roports.
-
-            <h3><span style="font-size:18px">L&rsquo;esprit d&rsquo;&eacute;quipe</span></h3>
-
-            <p>Notre activit&eacute; a tripl&eacute; de taille dans une ann&eacute;e d&rsquo;une
-                fa&ccedil;on rapide gr&acirc;ce &agrave; toute notre &eacute;quipe impliqu&eacute;e. Notre &eacute;quipe
-                est tr&egrave;s attach&eacute;e &agrave; la marque &laquo;GoCarTunisia&raquo; et se consid&egrave;rent
-                comme leur propre patron, chacun fait sa t&acirc;che avec le maximum de respect et de s&eacute;rieux.
-            </p>
-
-            <h3><span style="font-size:18px">La Solidarit&eacute;</span></h3>
-
-            <p>GoCarTunisia est une Entreprise humaine et familiale, dans ce sens nous soutenons pas mal d&rsquo;associations
-                de charit&eacute;, nous sommes partenaires de quelques &eacute;quipes sportives pour prouver notre
-                d&eacute;vouement dans plusieurs r&eacute;gions tunisiennes.</p>
-        </div>
-    </div>
-</section>
 
 
 
@@ -407,64 +385,60 @@
 
 
     <!-- Footer Section Starts -->
-    <section id="footer">
-        <div class="container footer-container mt-5">
-            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
-                <div class="col-md-4 mt-5 mt-md-0">
-                    <img src="../../images/logo.png" alt="image" />
-                    <p class="py-3">Votre route est notre passion ! 😊</p>
-                    <div class="d-flex align-items-center">
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:facebook"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:twitter"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:instagram"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:linkedin"></iconify-icon></a>
-                        <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
-                                icon="mdi:youtube"></iconify-icon></a>
-                    </div>
+<section id="footer">
+    <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+            <div class="col-md-4 mt-5 mt-md-0">
+                <img src="../../images/logo.png" alt="image" />
+                <p class="py-3">Your road is our passion! 😊</p>
+                <div class="d-flex align-items-center">
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:facebook"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:twitter"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:instagram"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:linkedin"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:youtube"></iconify-icon></a>
                 </div>
+            </div>
 
-                <div class="col-md-7 offset-md-1 mt-5">
-                    <ul class="footer-nav list-unstyled">
+            <div class="col-md-7 offset-md-1 mt-5">
+                <ul class="footer-nav list-unstyled">
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="./terms.html">Terms</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="./legal-notices.html">Legal Notices</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="./quality-charter.html">Quality Charter</a>
+                    </li>
 
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
 
+    <div class="container">
+        <footer class="">
+            <div class="col-12 text-center p-3">
+                <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
+            </div>
 
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="#">A Propos</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="./conditions-generales.html">Conditions</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="./mentions-legales.html">Mentions Légales</a>
-                        </li>
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="./charte-qualite.html">Charte Qualité</a>
-                        </li>
-
-                        <li class="nav-item me-2 mb-3">
-                            <a class="nav-link px-4" href="./contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
-        </div>
-
-        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
-
-        <div class="container">
-            <footer class="">
-                <div class="col-12 text-center p-3">
-                    <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
-                </div>
-
-            </footer>
-        </div>
-    </section>
+        </footer>
+    </div>
+</section>
 
     <!-- script ================================================== -->
     <script src="../../js/jquery-1.11.0.min.js"></script>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCarTunisia</title>
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!--Bootstrap ================================================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Style Sheet ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- script ================================================== -->
+    <script src="../../js/modernizr.js"></script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+    <nav
+      class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="../../images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active px-3"
+                  aria-current="page"
+                  href="../../en/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../en/index.html#rental"
+                  >Cars</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../en/index.html#pricing"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../en/index.html#services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../en/index.html#blog"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../en/index.html#action"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: var(--link-color)"
+                >
+                  <i class="bi-translate"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../index.html">
+                      <img src="https://flagcdn.com/16x12/fr.png" /> Francais</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../ar/index.html">
+                      <img src="https://flagcdn.com/16x12/tn.png" /> العربية</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center"
+            >
+              <ul class="navbar-nav justify-content-end align-items-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link px-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Login
+                  </a>
+                </li>
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist"
+                            >
+                              <button
+                                class="btn btn-outline-primary text-uppercase me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true"
+                              >
+                                Log In
+                              </button>
+                              <button
+                                class="btn btn-outline-primary text-uppercase"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false"
+                              >
+                                Sign Up
+                              </button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab"
+                            >
+                              <form id="form1" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Email Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail1"
+                                    name="email"
+                                    placeholder="Email"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Password</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword1"
+                                    placeholder="Password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center"
+                                  >
+                                    <a href="#" class="password"
+                                      >Forgot Password ?</a
+                                    >
+                                  </div>
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >Remember Me</span
+                                  >
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    Log In
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab"
+                            >
+                              <form id="form2" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Email Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail2"
+                                    name="email"
+                                    placeholder="Email"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >Password</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword2"
+                                    placeholder="Password"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >I agree to the
+                                    <a
+                                      href="#"
+                                      class="text-black password border-bottom"
+                                      >Privacy Policy</a
+                                    >
+                                  </span>
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    Sign Up
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <button
+                type="button"
+                class="btn btn-outline-primary nav-button mx-3"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+              >
+                Sign in
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab2"
+                            role="tablist"
+                          >
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-4"
+                              id="nav-sign-in-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in2"
+                              aria-selected="false"
+                            >
+                              Log In
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase active"
+                              id="nav-register-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register2"
+                              aria-selected="true"
+                            >
+                              Sign Up
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div
+                            class="tab-pane fade"
+                            id="nav-sign-in2"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2"
+                          >
+                            <form id="form3" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail3"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword3"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                                <div
+                                  id="passwordHelpBlock2"
+                                  class="form-text text-center"
+                                >
+                                  <a href="#" class="password"
+                                    >Forgot Password ?</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >Remember Me</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Log In
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-register2"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab2"
+                          >
+                            <form id="form4" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail4"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword4"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >I agree to the
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >Privacy Policy</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Sign Up
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section -->
+
+    <section class="py-md-5">
+      <div class="container" id="contact">
+        <div class="d-md-flex bord-1">
+          <h2 class="text-primary mt-5">
+            Car Rental Conditions in Tunisia with GoCarTunisia
+          </h2>
+        </div>
+        <!--  <p class="pl-3"> </p> -->
+        <div class="mt-3">
+          <p>
+            GoCarTunisia, hereinafter referred to as the "Lessor," rents to a
+            client hereinafter referred to as the "Lessee," the vehicle
+            mentioned on the front, subject to the terms and conditions stated
+            below, which the Lessee accepts without reservation.&nbsp;
+          </p>
+
+          <h4>Article 1 – USE OF THE VEHICLE</h4>
+
+          <p>
+            From the moment of delivery, the Lessee and authorized drivers are
+            fully responsible according to the terms set forth in the Civil
+            Code. The Lessee is prohibited from participating in any race,
+            competition, rally, or any other form of competition, as well as in
+            any tests or modifications. The Lessee agrees not to use the vehicle
+            for illegal purposes or other uses not intended by the Manufacturer.
+            The Lessee agrees to use the locking and protection systems at every
+            stop.
+          </p>
+
+          <h4>Article 2 – USAGE AREA</h4>
+
+          <p>
+            The Tunisian Republic; no vehicle may leave the territory of the
+            Tunisian Republic.
+          </p>
+
+          <p>
+            The Lessee agrees that the vehicle will not be used or driven
+            outside the area specified in the contract without the prior consent
+            of the Lessor.<br />
+            <br />
+            Any harmful consequences resulting from driving the vehicle outside
+            the declared area will be entirely at the Lessee’s expense, and the
+            Lessee cannot claim the benefits of the Lessor's guarantees,
+            including the reduction of excess.
+          </p>
+
+          <h4>Article 3 – VEHICLE CONDITION</h4>
+
+          <p>
+            The vehicle is delivered in good working order and body condition,
+            with keys, documents, and tires in good condition, including a spare
+            wheel and standard accessories. By signing the contract, the Lessee
+            acknowledges the vehicle in its current condition and agrees to
+            return it in the same working order and body condition, with tires,
+            spare wheel, and accessories in good condition. The Lessee is
+            prohibited from claiming compensation for service interruption,
+            incidents, or accidents attributed to the vehicle’s condition or
+            tires. The vehicle is delivered in perfect cleanliness, and it must
+            be returned in the same condition. Otherwise, cleaning fees will be
+            charged. Repairs resulting from abnormal wear, freezing, accidental
+            or undefined negligence remain the Lessee’s responsibility unless
+            the Lessee proves they are not at fault.
+          </p>
+
+          <p>
+            The Lessee remains responsible for all losses or non-accidental
+            damage suffered by the vehicle, keys, and documents, tires
+            (including punctures), rims, tools, instruments, accessories,
+            interior and exterior equipment. The Lessee agrees to reimburse the
+            Lessor the full amount of any damage or loss as well as the
+            vehicle's immobilization costs. The repair costs will be payable
+            upon estimate. It should be noted that the Lessor will immediately
+            collect the prepayment.
+          </p>
+
+          <h4>Article 4 – REQUIREMENTS FOR RENTING</h4>
+
+          <p>
+            The driver(s) must hold a license for at least four years and be at
+            least thirty years old.
+          </p>
+
+          <h4>Article 5 – CONTRACT DURATION</h4>
+
+          <p>
+            The rental is granted for a specified period according to the
+            contract.<br />
+            The rental is personal and is in no way transferable. The Lessee
+            agrees not to allow others to drive the vehicle.
+          </p>
+
+          <p>
+            In case of failure to return the vehicle at the specified expiration
+            date indicated on the front, the Lessor reserves the right to
+            repossess the vehicle from any location at the Lessee's exclusive
+            expense, without the Lessee being able to claim a breach of contract
+            against them.
+          </p>
+
+          <p>
+            In case of extension, the Lessee must visit the rental agency at
+            least 24 hours in advance to request the Lessor to extend the
+            contract and settle the extension of the rental. If the rental
+            period is exceeded without the Lessor's agreement, insurance will
+            end at the date and time specified in the contract. The Lessor
+            reserves the right to refuse any extension request.
+          </p>
+          <h4>Article 6 – VEHICLE AVAILABILITY</h4>
+
+          <p>
+            The vehicle is made available to the renter at the rental agency's
+            locations, and it must be returned to the same location (unless
+            expressly agreed otherwise).
+          </p>
+
+          <p>
+            The vehicle is delivered in perfect condition. A joint inspection of
+            the vehicle will be conducted and accepted by the renter. Any
+            potential reservations must be made at the time of pickup and must
+            be noted in the contract.
+          </p>
+
+          <h4>Article 7 – VEHICLE RETURN</h4>
+
+          <p>
+            The vehicle must be returned to the departure agency (unless
+            otherwise agreed).
+          </p>
+
+          <p>
+            The return must take place during the agency's opening hours. The
+            vehicle keys and documents must be handed over directly to the
+            rental agency staff. The renter agrees to return the vehicle in the
+            condition in which it was delivered. Any damages found upon return
+            will be the responsibility of the renter.
+          </p>
+
+          <h4>Article 8 – CARE AND USE</h4>
+
+          <p>
+            From the moment of pickup until the vehicle's return, the renter has
+            full control and responsibility for it, whether it is in use or
+            parked.
+          </p>
+
+          <p>
+            In general, the renter agrees to use the vehicle responsibly and in
+            particular:
+          </p>
+
+          <ul>
+            <li>
+              to allow only authorized drivers listed in the contract to drive
+              it,
+            </li>
+            <li>to drive only on roads suitable for vehicle use,</li>
+            <li>
+              to not participate in any race, rally, test, preparation, or
+              competition of any kind,
+            </li>
+            <li>
+              to not use the vehicle for illegal or immoral purposes, or for
+              purposes not intended by the manufacturer,
+            </li>
+            <li>
+              to not use it for pushing, towing, or pulling another vehicle
+              (except for rental vehicles equipped with special towing
+              equipment),
+            </li>
+            <li>
+              to not drive it under the influence of alcohol or substances that
+              impair the reflexes needed for driving,
+            </li>
+            <li>
+              to not use the vehicle for paid transport of people or goods
+              (except for utility vehicles),
+            </li>
+            <li>to not use it for driving lessons,</li>
+            <li>
+              to use it in compliance with the traffic code, customs
+              regulations, and generally with all legal and regulatory
+              provisions.
+            </li>
+          </ul>
+          <h4>Article 9 – FUEL AND LUBRICANT</h4>
+
+          <p>
+            Fuel is always the responsibility of the renter. Unless otherwise
+            stated, the vehicle is delivered with a half-full tank and must be
+            returned in the same condition. If not, the rental agency will
+            provide the service of refueling to half full. The fuel and service
+            fee will be charged according to the current rate. Any breakdowns
+            due to lack or error of fuel or lubricant remain the responsibility
+            of the renter. The renter must check the levels every 500 km. They
+            must constantly check oil and water levels.
+          </p>
+
+          <h4>Article 10 – PAYMENT – PREPAYMENT – SECURITY DEPOSIT</h4>
+
+          <p>
+            The rental amount and security deposit are determined by the rates
+            in effect. The renter pays the rental agency at the time of vehicle
+            pickup:
+          </p>
+
+          <ul>
+            <li>the amount of the requested security deposit,</li>
+            <li>
+              the estimated rental cost, calculated based on the daily rate and
+              the expected rental duration.
+            </li>
+          </ul>
+
+          <p>
+            The rental is understood to be in 24-hour periods. The renter
+            benefits from a one-hour grace period at the end of the rental.
+            Beyond that, an additional day is charged.<br />
+            <br />
+            By express agreement, the amount of the security deposit indicated
+            on the front is allocated to the rental agency as full ownership, to
+            the extent of the amounts owed by the renter in case of:
+          </p>
+
+          <ul>
+            <li>non-payment of rental fees,</li>
+            <li>
+              damage or loss of the vehicle under the specified circumstances,
+            </li>
+            <li>
+              non-return of the vehicle, except in cases of force majeure and
+              after formal notice.
+            </li>
+          </ul>
+
+          <h4>Article 11 – MAINTENANCE – REPAIR</h4>
+
+          <p>
+            Repairs involving the replacement of parts or tires due to normal
+            wear and tear are the responsibility of the rental agency. Repairs
+            resulting from abnormal wear, negligence, accidental, or
+            indeterminate causes remain the responsibility of the renter and
+            must be carried out without delay by the rental agency; their cost
+            will be increased by a compensation fee for immobilization. In
+            either case, if the vehicle is immobilized, the renter may only have
+            repairs done at an Official Agent of the vehicle’s brand, after
+            obtaining written approval from the rental agency, and must obtain a
+            paid invoice and the replaced defective parts.
+          </p>
+
+          <h4>Article 12 – INSURANCE</h4>
+
+          <h5>
+            The GoCarTunisia insurance is
+            <strong>third-party insurance</strong>.
+          </h5>
+
+          <h4>Insurance duration:</h4>
+
+          <p>
+            The insurance is only valid for the rental period and any
+            extensions.
+          </p>
+
+          <h4>The renter is covered for the following risks:</h4>
+
+          <ul>
+            <li>
+              For an unlimited amount for accidents caused to people who are in
+              the rental vehicle free of charge,
+            </li>
+            <li>
+              Against fire damage to the vehicle, except in cases of gross
+              negligence by the renter,
+            </li>
+            <li>
+              Against theft of the vehicle, except in cases of negligence by the
+              renter,
+            </li>
+            <li>
+              Against road accidents, <strong>non-responsible</strong>, with a
+              negligence charge equal to 4% of the vehicle's value, which is the
+              responsibility of the renter.
+            </li>
+          </ul>
+
+          <h4>The insurance does not cover the following:</h4>
+
+          <p>
+            The renter will be liable for repair costs, or the market value of
+            the vehicle, in the following cases:
+          </p>
+
+          <ul>
+            <li>
+              Driving the vehicle by a person whose name is not listed on this
+              contract as an authorized driver,
+            </li>
+            <li>
+              Damages caused in the absence of an identified third party or if
+              they <strong>fled</strong>, or due to gross fault, or due to gross
+              negligence: e.g., <strong>skidding</strong>,
+              <strong>crossing a solid line</strong>,
+              <strong>speeding, rear-end collision, failure to yield</strong>.
+            </li>
+            <li>
+              The insurance does not cover damages to
+              <strong>headlights</strong>, <strong>lights</strong>,
+              <strong>mirrors</strong>, <strong>rear window</strong>,
+              <strong>windscreen</strong>,
+              <strong>front and rear bumpers</strong>,
+              <strong>car paint</strong>, and any loss of
+              <strong>equipment</strong>, <strong>papers</strong>,
+              <strong>keys</strong>, and towing in case of an accident is at the
+              client's expense.
+            </li>
+            <li>
+              Any damage resulting from a poor assessment of the vehicle's size
+              (e.g., roof height, ruts, side scraping of the bodywork).
+            </li>
+            <li>
+              Driving with a blood alcohol level above the legal limit or under
+              the influence of substances that impair the reflexes necessary for
+              driving,
+            </li>
+            <li>Falling asleep or dozing off while driving,</li>
+            <li>
+              Damage to the vehicle's interior, tires, and rims, except in cases
+              where it can be proven they were not caused by the renter's fault
+              or negligence.
+            </li>
+            <li>Error regarding the type of fuel,</li>
+            <li>
+              Collision with a <strong>fixed or moving obstacle</strong> (e.g.,
+              road signs, an animal, or a pedestrian...),
+            </li>
+            <li>
+              Failure to return the vehicle keys and papers excludes theft
+              coverage,
+            </li>
+            <li>
+              Damage occurring on a construction site, private road, or closed
+              road,
+            </li>
+            <li>
+              Damage occurring after the contract's return date for the vehicle,
+            </li>
+            <li>
+              Damage caused by another vehicle belonging to the GoCarTunisia
+              company,
+            </li>
+            <li>
+              Damage caused by a vehicle registered in the renter's name or its
+              subsidiaries,
+            </li>
+            <li>Theft by an employee of the renter or an authorized driver,</li>
+            <li>Personal effects and goods,</li>
+            <li>Declarations made after the vehicle is returned.</li>
+          </ul>
+
+          <p>
+            Declaration: In case of an accident, a complete declaration must be
+            submitted within 24 hours to the rental agency by registered mail
+            with acknowledgment of receipt. This declaration must include the
+            circumstances, date and time, location, Agent number, a report from
+            the Police or National Guard, the names and addresses of witnesses,
+            as well as information about the other party. The renter must not
+            discuss liability, or negotiate or settle with third parties
+            regarding the accident. The renter agrees to immediately provide the
+            rental agency with all documents received following an accident and
+            any useful information.
+          </p>
+          <h4>Article 13 – UTILITY VEHICLES (SPECIAL RULES)</h4>
+
+          <p>
+            In addition to the obligations provided for in this contract, the
+            renter:
+          </p>
+
+          <ul>
+            <li>
+              assumes responsibility for driving and transportation operations,
+            </li>
+            <li>
+              agrees to transport in the vehicle only goods suitable for the
+              intended use,
+            </li>
+            <li>
+              is prohibited from loading materials that may damage the vehicle
+              or leave persistent residues, either by themselves or by their
+              packaging or securing,
+            </li>
+            <li>
+              agrees to use the vehicle only on driving areas for which it was
+              designed,
+            </li>
+            <li>
+              acknowledges responsibility for any damage to the vehicle, its
+              equipment, or accessories caused by loading or unloading,
+            </li>
+            <li>
+              will be responsible for the consequences of exceeding the
+              vehicle's total authorized weight or the number of persons allowed
+              as indicated on the registration card,
+            </li>
+            <li>will return the vehicle free of any packaging or goods.</li>
+          </ul>
+
+          <h4>Article 14 – VEHICLE DOCUMENTS</h4>
+
+          <p>
+            The renter shall return to the rental agency all the vehicle’s
+            relevant documents upon return of the vehicle; otherwise, the rental
+            will continue to be charged at the original rate until a loss
+            certificate is produced and the duplicate fees are paid.
+          </p>
+
+          <h4>Article 15 – FINES, PENALTIES</h4>
+
+          <p>
+            The renter and the authorized driver are responsible for fines,
+            <span style="font-family: Arial, sans-serif; font-size: 9pt"
+              >speeding violations, automated radar penalties,</span
+            >
+            tickets, and citations issued against them, which are legally their
+            responsibility. They agree to reimburse the rental agency for any
+            resulting costs, including impound fees, should the rental agency be
+            required to pay them in advance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Starts -->
+    <section id="footer">
+      <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+          <div class="col-md-4 mt-5 mt-md-0">
+            <img src="../../images/logo.png" alt="image" />
+            <p class="py-3">Your road is our passion! 😊</p>
+            <div class="d-flex align-items-center">
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:facebook"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:twitter"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:instagram"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:linkedin"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:youtube"
+                ></iconify-icon
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-7 offset-md-1 mt-5">
+            <ul class="footer-nav list-unstyled">
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" aria-current="page" href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">Terms</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./legal-notices.html"
+                  >Legal Notices</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./quality-charter.html"
+                  >Quality Charter</a
+                >
+              </li>
+
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center border-top"
+      ></footer>
+
+      <div class="container">
+        <footer class="">
+          <div class="col-12 text-center p-3">
+            <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="../../js/plugins.js"></script>
+    <script src="../../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  </body>
+</html>
