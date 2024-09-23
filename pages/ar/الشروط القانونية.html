@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCarTunisia</title>
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!--Bootstrap ================================================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Style Sheet ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- script ================================================== -->
+    <script src="../../js/modernizr.js"></script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+    <nav
+      class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="../../images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav align-items-center justify-content-start flex-grow-1 d-flex flex-row-reverse pe-3"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active px-3"
+                  aria-current="page"
+                  href="../../ar/index.html"
+                  >الصفحة الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#rental"
+                  >السيارات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#pricing"
+                  >الأسعار</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#services"
+                  >الخدمات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#blog"
+                  >المدونة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#action"
+                  >الإتصال</a
+                >
+              </li>
+            </ul>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: var(--link-color)"
+                >
+                  <i class="bi-translate"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../../en/index.html">
+                      <img src="https://flagcdn.com/16x12/gb.png" /> English</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../../index.html">
+                      <img src="https://flagcdn.com/16x12/fr.png" /> Français</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center"
+            >
+              <ul class="navbar-nav justify-content-end align-items-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link px-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    تسجيل الدخول
+                  </a>
+                </li>
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist"
+                            >
+                              <button
+                                class="btn btn-outline-primary text-uppercase me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true"
+                              >
+                                تسجيل الدخول
+                              </button>
+                              <button
+                                class="btn btn-outline-primary text-uppercase"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false"
+                              >
+                                التسجيل في الموقع
+                              </button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab"
+                            >
+                              <form id="form1" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >البريد الإلكتروني</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail1"
+                                    name="email"
+                                    style="text-align: right !important"
+                                    placeholder="عنوان بريدك  الإلكتروني"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >كلمة السر</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword1"
+                                    placeholder="كلمة مرورك"
+                                    style="text-align: right !important"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center"
+                                  >
+                                    <a href="#" class="password"
+                                      >نسيت كلمة السر ؟</a
+                                    >
+                                  </div>
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >تذكرنى</span
+                                  >
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    تسجيل الدخول
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab"
+                            >
+                              <form id="form2" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >البريد الإلكتروني
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail2"
+                                    name="email"
+                                    style="text-align: right !important"
+                                    placeholder="عنوان بريدك  الإلكتروني"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >كلمة السر</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword2"
+                                    placeholder="كلمة مرورك"
+                                    style="text-align: right !important"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >أوافق على
+                                    <a
+                                      href="#"
+                                      class="text-black password border-bottom"
+                                      >سياسة الخصوصية</a
+                                    >
+                                  </span>
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    التسجيل في الموقع
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <button
+                type="button"
+                class="btn btn-outline-primary nav-button mx-3"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+              >
+                التسجيل في الموقع
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab2"
+                            role="tablist"
+                          >
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-4"
+                              id="nav-sign-in-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in2"
+                              aria-selected="false"
+                            >
+                              تسجيل الدخول
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase active"
+                              id="nav-register-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register2"
+                              aria-selected="true"
+                            >
+                              التسجيل في الموقع
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div
+                            class="tab-pane fade"
+                            id="nav-sign-in2"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2"
+                          >
+                            <form id="form3" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >البريد الإلكتروني
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail3"
+                                  name="email"
+                                  style="text-align: right !important"
+                                  placeholder="عنوان بريدك  الإلكتروني"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >كلمة السر</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword3"
+                                  placeholder="كلمة مرورك"
+                                  style="text-align: right !important"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                                <div
+                                  id="passwordHelpBlock2"
+                                  class="form-text text-center"
+                                >
+                                  <a href="#" class="password"
+                                    >نسيت كلمة السر ؟</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >تذكرنى</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  تسجيل الدخول
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-register2"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab2"
+                          >
+                            <form id="form4" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >البريد الإلكتروني
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail4"
+                                  name="email"
+                                  style="text-align: right !important"
+                                  placeholder="عنوان بريدك  الإلكتروني"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >كلمة السر</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword4"
+                                  placeholder="كلمة مرورك"
+                                  style="text-align: right !important"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >أوافق على
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >سياسة الخصوصية</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  التسجيل في الموقع
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section -->
+
+    <section class="py-md-5" style="direction: rtl; text-align: right">
+      <div class="container" id="contact">
+        <div class="d-md-flex bord-1">
+          <h2 class="text-primary mt-5">
+            شروط تأجير السيارات في تونس مع GoCarTunisia
+          </h2>
+        </div>
+
+        <div class="mt-3">
+          <p>
+            تقوم شركة GoCarTunisia، المشار إليها فيما يلي باسم "المؤجر"، بتأجير
+            السيارة للعميل المشار إليه فيما يلي باسم "المستأجر"، وذلك وفقًا
+            للشروط والأحكام التالية، التي يقبلها المستأجر دون تحفظ.&nbsp;
+          </p>
+
+          <h4>المادة 1 – استخدام السيارة</h4>
+
+          <p>
+            من لحظة تسليم السيارة، يكون المستأجر والسائقون المصرح لهم مسؤولين
+            بالكامل وفقًا للشروط المنصوص عليها في القانون المدني. يُحظر على
+            المستأجر المشاركة في أي سباق، مسابقة، أو تجمع، أو أي شكل آخر من
+            أشكال المنافسة، وكذلك أي اختبارات أو تعديلات. يوافق المستأجر على عدم
+            استخدام السيارة لأغراض غير قانونية أو لأغراض غير مخصصة لها من قبل
+            الشركة المصنعة. يوافق المستأجر على استخدام أنظمة القفل والحماية في
+            كل مرة يتوقف فيها.
+          </p>
+
+          <h4>المادة 2 – منطقة الاستخدام</h4>
+
+          <p>
+            الجمهورية التونسية؛ لا يجوز إخراج السيارة من أراضي الجمهورية
+            التونسية.
+          </p>
+
+          <p>
+            يوافق المستأجر على عدم استخدام السيارة أو قيادتها خارج المنطقة
+            المحددة في العقد دون موافقة مسبقة من المؤجر.<br /><br />
+            تكون العواقب الضارة الناجمة عن قيادة السيارة خارج المنطقة المعلنة
+            على نفقة المستأجر بالكامل، ولا يمكن للمستأجر المطالبة بفوائد ضمانات
+            المؤجر، بما في ذلك تقليل الفائض.
+          </p>
+
+          <h4>المادة 3 – حالة السيارة</h4>
+
+          <p>
+            يتم تسليم السيارة في حالة عمل جيدة وحالة خارجية جيدة، مع مفاتيح،
+            ووثائق، وإطارات في حالة جيدة، بما في ذلك العجلة الاحتياطية
+            والإكسسوارات القياسية. بتوقيع العقد، يعترف المستأجر بحالة السيارة
+            كما هي ويوافق على إعادتها بنفس حالة العمل والحالة الخارجية، مع
+            الإطارات والعجلة الاحتياطية والإكسسوارات في حالة جيدة.
+          </p>
+          <h4>المادة 4 - متطلبات التأجير</h4>
+
+          <p>
+            يجب أن يكون السائق/السائقون حاملين لرخصة قيادة لمدة لا تقل عن أربع
+            سنوات وأن لا يقل عمرهم عن ثلاثين عامًا.
+          </p>
+
+          <h4>المادة 5 - مدة العقد</h4>
+
+          <p>
+            يتم منح الإيجار لفترة محددة وفقًا للعقد.<br />
+            الإيجار شخصي وغير قابل للتحويل بأي حال من الأحوال. يلتزم المستأجر
+            بعدم السماح للآخرين بقيادة المركبة.
+          </p>
+
+          <p>
+            في حالة عدم إرجاع المركبة في التاريخ المحدد المشار إليه في المقدمة،
+            يحتفظ المؤجر بالحق في استعادة المركبة من أي موقع على نفقة المستأجر
+            الخاصة، دون أن يتمكن المستأجر من المطالبة بانتهاك العقد ضد المؤجر.
+          </p>
+
+          <p>
+            في حالة التمديد، يجب على المستأجر زيارة وكالة التأجير قبل 24 ساعة
+            على الأقل لطلب تمديد العقد وتسوية التمديد. إذا تجاوزت مدة الإيجار
+            بدون موافقة المؤجر، فسوف تنتهي صلاحية التأمين في التاريخ والوقت
+            المحددين في العقد. يحتفظ المؤجر بالحق في رفض أي طلب تمديد.
+          </p>
+
+          <h4>المادة 6 - توفر المركبة</h4>
+
+          <p>
+            تكون المركبة متاحة للمستأجر في مواقع وكالة التأجير، ويجب إعادتها إلى
+            نفس الموقع (ما لم يتم الاتفاق على خلاف ذلك صراحة).
+          </p>
+
+          <p>
+            تُسلم المركبة في حالة ممتازة. سيتم إجراء فحص مشترك للمركبة وقبوله من
+            قبل المستأجر. يجب تسجيل أي تحفظات محتملة في وقت الاستلام وفي العقد.
+          </p>
+          <h4>المادة 7 - إرجاع المركبة</h4>
+
+          <p>
+            يجب إعادة المركبة إلى وكالة الانطلاق (ما لم يتم الاتفاق على خلاف
+            ذلك).
+          </p>
+
+          <p>
+            يجب أن يتم الإرجاع خلال ساعات عمل الوكالة. يجب تسليم مفاتيح المركبة
+            والمستندات مباشرة إلى موظفي وكالة التأجير. يلتزم المستأجر بإعادة
+            المركبة في الحالة التي تم تسليمها بها. أي أضرار تُكتشف عند الإرجاع
+            ستكون مسؤولية المستأجر.
+          </p>
+
+          <h4>المادة 8 - العناية والاستخدام</h4>
+
+          <p>
+            من لحظة استلام المركبة وحتى إعادتها، يتحمل المستأجر كامل السيطرة
+            والمسؤولية عنها سواء كانت قيد الاستخدام أو متوقفة.
+          </p>
+
+          <p>بشكل عام، يلتزم المستأجر باستخدام المركبة بمسؤولية وبشكل خاص:</p>
+
+          <ul>
+            <li>السماح فقط للسائقين المعتمدين المدرجين في العقد بقيادتها،</li>
+            <li>القيادة فقط على الطرق المناسبة لاستخدام المركبة،</li>
+            <li>
+              عدم المشاركة في أي سباق، تجمع، اختبار، إعداد، أو منافسة من أي نوع،
+            </li>
+            <li>
+              عدم استخدام المركبة لأغراض غير قانونية أو غير أخلاقية أو لأغراض
+              غير مقصودة من قبل الشركة المصنعة،
+            </li>
+            <li>
+              عدم استخدامها لدفع أو سحب أو جر مركبة أخرى (باستثناء المركبات
+              المؤجرة المجهزة بمعدات السحب الخاصة)،
+            </li>
+            <li>
+              عدم قيادتها تحت تأثير الكحول أو المواد التي تؤثر على ردود الأفعال
+              اللازمة للقيادة،
+            </li>
+            <li>
+              عدم استخدامها لنقل الأشخاص أو البضائع مقابل أجر (باستثناء المركبات
+              التجارية)،
+            </li>
+            <li>عدم استخدامها لتعليم القيادة،</li>
+            <li>
+              استخدامها بما يتوافق مع قانون المرور واللوائح الجمركية وجميع
+              الأحكام القانونية والتنظيمية العامة.
+            </li>
+          </ul>
+
+          <h4>المادة 9 - الوقود والزيوت</h4>
+
+          <p>
+            الوقود يكون دائمًا على نفقة المستأجر. ما لم ينص على خلاف ذلك، يتم
+            تسليم المركبة بخزان نصف ممتلئ ويجب إعادتها بنفس الحالة. إذا لم يتم
+            ذلك، ستقوم وكالة التأجير بتزويد الوقود حتى نصف الخزان مقابل رسوم
+            خدمة سيتم تحصيلها بناءً على السعر الحالي. أي أعطال ناجمة عن نقص أو
+            خطأ في الوقود أو الزيت تكون مسؤولية المستأجر. يجب على المستأجر فحص
+            المستويات كل 500 كم، ويجب أن يتحقق باستمرار من مستويات الزيت والماء.
+          </p>
+
+          <h4>المادة 10 - الدفع - الدفع المسبق - التأمينات</h4>
+
+          <p>
+            يتم تحديد مبلغ الإيجار والتأمينات وفقًا للأسعار المعمول بها. يقوم
+            المستأجر بالدفع لوكالة التأجير عند استلام المركبة:
+          </p>
+
+          <ul>
+            <li>مبلغ التأمين المطلوب،</li>
+            <li>
+              التكلفة التقديرية للإيجار، محسوبة بناءً على السعر اليومي والمدة
+              المتوقعة للإيجار.
+            </li>
+          </ul>
+
+          <p>
+            يُفهم أن الإيجار يتم على أساس فترات 24 ساعة. يستفيد المستأجر من فترة
+            سماح لمدة ساعة في نهاية الإيجار. بعد ذلك، يتم تحصيل يوم إضافي.<br /><br />
+            بموجب اتفاق صريح، يتم تخصيص مبلغ التأمين المحدد في المقدمة لوكالة
+            التأجير كملكية كاملة، بقدر المبالغ المستحقة من قبل المستأجر في حالة:
+          </p>
+
+          <ul>
+            <li>عدم دفع رسوم الإيجار،</li>
+            <li>تلف أو فقدان المركبة في الظروف المحددة،</li>
+            <li>
+              عدم إعادة المركبة، باستثناء حالات القوة القاهرة وبعد إخطار رسمي.
+            </li>
+          </ul>
+          <h4>المادة 11 - الصيانة - الإصلاح</h4>
+
+          <p>
+            تكون الإصلاحات التي تشمل استبدال الأجزاء أو الإطارات نتيجة للاستهلاك
+            العادي على نفقة وكالة التأجير. أما الإصلاحات الناتجة عن الاستهلاك
+            غير الطبيعي أو الإهمال أو الأسباب العرضية أو غير المحددة فتكون على
+            نفقة المستأجر ويجب إجراؤها دون تأخير من قبل وكالة التأجير. ستتحمل
+            تكاليف الإصلاحات بالإضافة إلى رسوم تعويضية عن التوقف عن الاستخدام.
+            في كلتا الحالتين، إذا تم تعطيل المركبة، يُسمح للمستأجر بإجراء
+            الإصلاحات فقط لدى وكيل رسمي للعلامة التجارية للمركبة بعد الحصول على
+            موافقة خطية من وكالة التأجير، ويجب أن يحصل على فاتورة مدفوعة
+            والأجزاء التالفة المستبدلة.
+          </p>
+
+          <h4>المادة 12 - التأمين</h4>
+
+          <h5>
+            تأمين GoCarTunisia هو
+            <strong>تأمين ضد الغير</strong>.
+          </h5>
+
+          <h4>مدة التأمين:</h4>
+
+          <p>يكون التأمين صالحًا فقط للفترة المحددة للإيجار وأي تمديدات.</p>
+
+          <h4>يغطي التأمين المستأجر ضد المخاطر التالية:</h4>
+
+          <ul>
+            <li>
+              مبلغ غير محدود للحوادث التي تسببها للأشخاص المتواجدين في المركبة
+              المؤجرة بدون أجر،
+            </li>
+            <li>
+              ضد أضرار الحريق للمركبة، إلا في حالات الإهمال الجسيم من قبل
+              المستأجر،
+            </li>
+            <li>ضد سرقة المركبة، باستثناء حالات الإهمال من قبل المستأجر،</li>
+            <li>
+              ضد الحوادث المرورية غير المسؤولة، مع تحميل المستأجر نسبة إهمال
+              تساوي 4٪ من قيمة المركبة.
+            </li>
+          </ul>
+
+          <h4>التأمين لا يغطي ما يلي:</h4>
+
+          <p>
+            سيكون المستأجر مسؤولاً عن تكاليف الإصلاح أو القيمة السوقية للمركبة
+            في الحالات التالية:
+          </p>
+
+          <ul>
+            <li>قيادة المركبة من قبل شخص غير مدرج في العقد كسائق معتمد،</li>
+            <li>
+              الأضرار التي تحدث في غياب طرف ثالث محدد أو إذا هرب، أو نتيجة لخطأ
+              جسيم أو إهمال مثل الانزلاق، عبور خط صلب، السرعة المفرطة، التصادم
+              الخلفي، أو عدم الامتثال لإشارات المرور.
+            </li>
+            <li>
+              التأمين لا يغطي الأضرار التي تلحق بالمصابيح الأمامية، الأنوار،
+              المرايا، النوافذ الخلفية، الزجاج الأمامي، المصدات الأمامية
+              والخلفية، طلاء السيارة، وأي فقدان للمعدات أو المستندات أو
+              المفاتيح. كما أن عملية السحب في حالة وقوع حادث تكون على نفقة
+              العميل.
+            </li>
+            <li>
+              أي أضرار ناتجة عن تقييم سيء لحجم المركبة (مثل ارتفاع السقف،
+              الأخاديد، أو احتكاك جانبي بالجسم).
+            </li>
+            <li>
+              القيادة بمستوى كحول في الدم أعلى من الحد القانوني أو تحت تأثير
+              المواد التي تؤثر على ردود الفعل اللازمة للقيادة.
+            </li>
+            <li>النوم أثناء القيادة.</li>
+            <li>
+              الأضرار التي تلحق بداخلية المركبة، الإطارات، والجنوط، إلا في
+              الحالات التي يثبت فيها أنها لم تكن ناجمة عن خطأ أو إهمال من
+              المستأجر.
+            </li>
+            <li>الخطأ في نوع الوقود.</li>
+            <li>
+              التصادم مع عقبة ثابتة أو متحركة (مثل لافتات الطريق، حيوان، أو
+              مشاة...).
+            </li>
+            <li>عدم إعادة مفاتيح المركبة والمستندات يستبعد تغطية السرقة.</li>
+            <li>الأضرار التي تحدث في موقع بناء أو طريق خاص أو طريق مغلق.</li>
+            <li>الأضرار التي تحدث بعد تاريخ انتهاء عقد الإيجار.</li>
+            <li>الأضرار التي تسببها مركبة أخرى تابعة لشركة GoCarTunisia.</li>
+            <li>الأضرار التي تسببها مركبة مسجلة باسم المستأجر أو فروعها.</li>
+            <li>السرقة من قبل موظف المستأجر أو سائق معتمد.</li>
+            <li>الممتلكات الشخصية والبضائع.</li>
+            <li>التصريحات التي تتم بعد إعادة المركبة.</li>
+          </ul>
+
+          <p>
+            التصريح: في حالة وقوع حادث، يجب تقديم تقرير كامل خلال 24 ساعة إلى
+            وكالة التأجير عبر البريد المسجل مع إشعار بالاستلام. يجب أن يشمل هذا
+            التقرير الظروف والتاريخ والوقت والموقع ورقم الوكيل وتقرير من الشرطة
+            أو الحرس الوطني وأسماء وعناوين الشهود وكذلك معلومات عن الطرف الآخر.
+            لا يجب على المستأجر مناقشة المسؤولية أو التفاوض أو التسوية مع
+            الأطراف الثالثة فيما يتعلق بالحادث. يلتزم المستأجر بتقديم جميع
+            الوثائق المستلمة فورًا إلى وكالة التأجير بعد الحادث وأي معلومات
+            مفيدة.
+          </p>
+          <h4>المادة 13 – المركبات التجارية (قواعد خاصة)</h4>
+
+          <p>
+            بالإضافة إلى الالتزامات المنصوص عليها في هذا العقد، يلتزم المستأجر:
+          </p>
+
+          <ul>
+            <li>بتحمل المسؤولية عن عمليات القيادة والنقل،</li>
+            <li>
+              بالموافقة على نقل البضائع المناسبة للاستخدام المقصود للمركبة،
+            </li>
+            <li>
+              بحظر تحميل المواد التي قد تلحق الضرر بالمركبة أو تترك بقايا
+              مستمرة، سواء كانت بذاتها أو من خلال تعبئتها أو تثبيتها،
+            </li>
+            <li>بالموافقة على استخدام المركبة فقط في المناطق المصممة لها،</li>
+            <li>
+              بالاعتراف بالمسؤولية عن أي ضرر يلحق بالمركبة أو بمعداتها أو
+              ملحقاتها الناتج عن التحميل أو التفريغ،
+            </li>
+            <li>
+              بتحمل المسؤولية عن العواقب الناتجة عن تجاوز الوزن الإجمالي المسموح
+              به للمركبة أو عدد الأشخاص المسموح بهم كما هو موضح في بطاقة
+              التسجيل،
+            </li>
+            <li>بإعادة المركبة خالية من أي تغليف أو بضائع.</li>
+          </ul>
+
+          <h4>المادة 14 – وثائق المركبة</h4>
+
+          <p>
+            يجب على المستأجر إعادة جميع وثائق المركبة ذات الصلة إلى وكالة
+            التأجير عند إرجاع المركبة؛ وإلا فسيستمر تحميل رسوم الإيجار بالسعر
+            الأصلي حتى يتم تقديم شهادة الفقدان ودفع رسوم استخراج النسخ المكررة.
+          </p>
+
+          <h4>المادة 15 – الغرامات والعقوبات</h4>
+
+          <p>
+            المستأجر والسائق المعتمد مسؤولون عن الغرامات، مخالفات السرعة،
+            العقوبات الناجمة عن الرادار الآلي، التذاكر، والاستدعاءات الصادرة
+            ضدهم والتي تقع قانونياً تحت مسؤوليتهم. يوافقون على تعويض وكالة
+            التأجير عن أي تكاليف ناتجة بما في ذلك رسوم الحجز، في حال اضطرت وكالة
+            التأجير لدفعها مقدماً.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Starts -->
+    <section id="footer">
+      <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+          <div class="col-md-4 mt-5 mt-md-0">
+            <img src="../../images/logo.png" alt="image" />
+            <p class="py-3">Your road is our passion! 😊</p>
+            <div class="d-flex align-items-center">
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:facebook"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:twitter"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:instagram"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:linkedin"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:youtube"
+                ></iconify-icon
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-7 offset-md-1 mt-5">
+            <ul class="footer-nav list-unstyled">
+              <li class="nav-item me-2 mb-3">
+                <a
+                  class="nav-link px-4"
+                  aria-current="page"
+                  href="./من نحن.html"
+                  >نبذة عنا</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./الشروط والأحكام.html"
+                  >الشروط والأحكام</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">الشروط القانونية</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./ميثاق الجودة.html"
+                  >ميثاق الجودة</a
+                >
+              </li>
+
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./الاتصال.html">الاتصال</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center border-top"
+      ></footer>
+
+      <div class="container">
+        <footer class="">
+          <div class="col-12 text-center p-3">
+            <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="../../js/plugins.js"></script>
+    <script src="../../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  </body>
+</html>

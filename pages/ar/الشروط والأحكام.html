@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCarTunisia</title>
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!--Bootstrap ================================================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Style Sheet ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- script ================================================== -->
+    <script src="../../js/modernizr.js"></script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+    <nav
+      class="navbar navbar-expand-lg navbar-light container-fluid py-3 position-fixed"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="../../images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav align-items-center justify-content-start flex-grow-1 d-flex flex-row-reverse pe-3"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active px-3"
+                  aria-current="page"
+                  href="../../ar/index.html"
+                  >الصفحة الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#rental"
+                  >السيارات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#pricing"
+                  >الأسعار</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#services"
+                  >الخدمات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#blog"
+                  >المدونة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="../../ar/index.html#action"
+                  >الإتصال</a
+                >
+              </li>
+            </ul>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Button group with nested dropdown"
+            >
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: var(--link-color)"
+                >
+                  <i class="bi-translate"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../../en/index.html">
+                      <img src="https://flagcdn.com/16x12/gb.png" /> English</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../../index.html">
+                      <img src="https://flagcdn.com/16x12/fr.png" /> Français</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center"
+            >
+              <ul class="navbar-nav justify-content-end align-items-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link px-3"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    تسجيل الدخول
+                  </a>
+                </li>
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tabs-listing">
+                          <nav>
+                            <div
+                              class="nav nav-tabs d-flex justify-content-center border-0"
+                              id="nav-tab"
+                              role="tablist"
+                            >
+                              <button
+                                class="btn btn-outline-primary text-uppercase me-3 active"
+                                id="nav-sign-in-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-sign-in"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-sign-in"
+                                aria-selected="true"
+                              >
+                                تسجيل الدخول
+                              </button>
+                              <button
+                                class="btn btn-outline-primary text-uppercase"
+                                id="nav-register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-register"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-register"
+                                aria-selected="false"
+                              >
+                                التسجيل في الموقع
+                              </button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div
+                              class="tab-pane fade active show"
+                              id="nav-sign-in"
+                              role="tabpanel"
+                              aria-labelledby="nav-sign-in-tab"
+                            >
+                              <form id="form1" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >البريد الإلكتروني</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail1"
+                                    name="email"
+                                    style="text-align: right !important"
+                                    placeholder="عنوان بريدك  الإلكتروني"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword1"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >كلمة السر</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword1"
+                                    placeholder="كلمة مرورك"
+                                    style="text-align: right !important"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                  <div
+                                    id="passwordHelpBlock"
+                                    class="form-text text-center"
+                                  >
+                                    <a href="#" class="password"
+                                      >نسيت كلمة السر ؟</a
+                                    >
+                                  </div>
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >تذكرنى</span
+                                  >
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    تسجيل الدخول
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="nav-register"
+                              role="tabpanel"
+                              aria-labelledby="nav-register-tab"
+                            >
+                              <form id="form2" class="form-group flex-wrap p-3">
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="exampleInputEmail2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >البريد الإلكتروني
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="exampleInputEmail2"
+                                    name="email"
+                                    style="text-align: right !important"
+                                    placeholder="عنوان بريدك  الإلكتروني"
+                                    class="form-control ps-3"
+                                  />
+                                </div>
+                                <div class="form-input col-lg-12 my-4">
+                                  <label
+                                    for="inputPassword2"
+                                    class="form-label fs-6 text-uppercase fw-bold text-black"
+                                    >كلمة السر</label
+                                  >
+                                  <input
+                                    type="password"
+                                    id="inputPassword2"
+                                    placeholder="كلمة مرورك"
+                                    style="text-align: right !important"
+                                    class="form-control ps-3"
+                                    aria-describedby="passwordHelpBlock"
+                                  />
+                                </div>
+                                <label class="py-3">
+                                  <input
+                                    type="checkbox"
+                                    required=""
+                                    class="d-inline"
+                                  />
+                                  <span class="label-body text-black"
+                                    >أوافق على
+                                    <a
+                                      href="#"
+                                      class="text-black password border-bottom"
+                                      >سياسة الخصوصية</a
+                                    >
+                                  </span>
+                                </label>
+                                <div class="d-grid my-3">
+                                  <button
+                                    class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                  >
+                                    التسجيل في الموقع
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <button
+                type="button"
+                class="btn btn-outline-primary nav-button mx-3"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+              >
+                التسجيل في الموقع
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab2"
+                            role="tablist"
+                          >
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-4"
+                              id="nav-sign-in-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in2"
+                              aria-selected="false"
+                            >
+                              تسجيل الدخول
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase active"
+                              id="nav-register-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register2"
+                              aria-selected="true"
+                            >
+                              التسجيل في الموقع
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div
+                            class="tab-pane fade"
+                            id="nav-sign-in2"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2"
+                          >
+                            <form id="form3" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >البريد الإلكتروني
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail3"
+                                  name="email"
+                                  style="text-align: right !important"
+                                  placeholder="عنوان بريدك  الإلكتروني"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >كلمة السر</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword3"
+                                  placeholder="كلمة مرورك"
+                                  style="text-align: right !important"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                                <div
+                                  id="passwordHelpBlock2"
+                                  class="form-text text-center"
+                                >
+                                  <a href="#" class="password"
+                                    >نسيت كلمة السر ؟</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >تذكرنى</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  تسجيل الدخول
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-register2"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab2"
+                          >
+                            <form id="form4" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >البريد الإلكتروني
+                                </label>
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail4"
+                                  name="email"
+                                  style="text-align: right !important"
+                                  placeholder="عنوان بريدك  الإلكتروني"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >كلمة السر</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword4"
+                                  placeholder="كلمة مرورك"
+                                  style="text-align: right !important"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >أوافق على
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >سياسة الخصوصية</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  التسجيل في الموقع
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section -->
+    <section class="py-md-5" style="direction: rtl">
+      <div class="container" id="contact">
+        <div class="d-md-flex bord-1">
+          <h2 class="text-primary mt-5">إشعار قانوني</h2>
+        </div>
+        <div class="mt-3">
+          <div class="d-md-flex justify-content-center row">
+            <div class="col-md-8 text-center">
+              <div class="mb-4 table-responsive">
+                <table border="1" cellpadding="6" cellspacing="1" class="table">
+                  <tbody>
+                    <tr>
+                      <td>اسم الشركة وعنوانها:</td>
+                      <td>
+                        <strong>GoCarTunisia S.A.R.L</strong><br />
+                        المكتب الرئيسي: شارع منصف باي 8050 الحمامات
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>المدير / المؤسس:</td>
+                      <td>محمد أمين النوري</td>
+                    </tr>
+                    <tr>
+                      <td>تاريخ بدء النشاط:</td>
+                      <td>14/02/2023</td>
+                    </tr>
+                    <tr>
+                      <td>رأس المال:</td>
+                      <td>200,000 دينار تونسي</td>
+                    </tr>
+                    <tr>
+                      <td>الموقع الإلكتروني:</td>
+                      <td>
+                        <a href="http://gocartunisia.tn/"
+                          >https://gocartunisia.tn</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>عنوان البريد الإلكتروني:</td>
+                      <td>
+                        <a href="mailto:info@GoCarTunisia.tn"
+                          >info@gocartunisia.tn</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>رقم التسجيل التجاري:</td>
+                      <td>رقم: B0731042023</td>
+                    </tr>
+                    <tr>
+                      <td>رمز الضريبة على القيمة المضافة:</td>
+                      <td>0887136C/B/N/000</td>
+                    </tr>
+                    <tr>
+                      <td>البنك:</td>
+                      <td>بنك BH، فرع بوفريقة</td>
+                    </tr>
+                    <tr>
+                      <td>رقم الحساب البنكي الوطني:</td>
+                      <td>1402 6026 1017 0005 6109</td>
+                    </tr>
+                    <tr>
+                      <td>رقم الحساب البنكي الدولي (IBAN):</td>
+                      <td>TN 59 1402 6026 1017 0005 6109</td>
+                    </tr>
+                    <tr>
+                      <td>رمز BIC / SWIFT:</td>
+                      <td>BHBKTNTT</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="row">
+                <div class="align-items-stretch col-md-6 d-flex">
+                  <div class="card mb-4 shadow">
+                    <div class="card-body">
+                      <h2>
+                        <span style="font-size: 22px">حقوق الملكية</span>
+                      </h2>
+
+                      <p>
+                        جميع حقوق الطبع والنشر، والعلامات التجارية، وحقوق قاعدة
+                        البيانات، وغيرها من حقوق الملكية الفكرية المتعلقة بعناصر
+                        هذا الموقع (وكذلك بنية هذا الموقع وعرضه)، بالإضافة إلى
+                        كود البرمجيات، هي ملك لنا أو ملك لممنوحينا. دون إذن
+                        كتابي مسبق منا، لا يحق لك نسخ أو تعديل أو تغيير أو نشر
+                        أو توزيع أو بيع أو حتى نقل عناصر هذا الموقع أو كود
+                        البرمجيات الخاص به، كليًا أو جزئيًا. ومع ذلك، يمكن تنزيل
+                        محتوى هذا الموقع وطباعته أو نسخه لأغراض شخصية وغير
+                        تجارية.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="align-items-stretch col-md-6 d-flex">
+                  <div class="card mb-4 shadow">
+                    <div class="card-body">
+                      <h2>
+                        <span style="font-size: 22px">البيانات الشخصية</span>
+                      </h2>
+
+                      <p>
+                        تصفح الموقع
+                        <a href="https://www.gocartunisia.tn/"
+                          >https://www.gocartunisia.tn</a
+                        >
+                        مجاني ولا يتطلب من المستخدم الكشف عن هويته أو أي معلومات
+                        شخصية. يحق للمستخدم الوصول إلى، وتحديث، وتصحيح، أو حذف
+                        بياناته الشخصية المخزنة لدى GoCarTunisia عن طريق الكتابة
+                        إلى: GoCarTunisia، شارع منصف باي 8050 الحمامات. لحماية
+                        خصوصية وأمن بيانات المستخدمين الشخصية، تتخذ GoCarTunisia
+                        التدابير اللازمة للتحقق من هوية المستخدم قبل منح
+                        التصحيحات أو الوصول المطلوب.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow">
+                <div class="card-body">
+                  <h2>
+                    <span style="font-size: 22px">الملكية الفكرية</span>
+                  </h2>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>
+                        <span style="font-size: 18px">حقوق الطبع والنشر</span>
+                      </h3>
+
+                      <p>
+                        تظل حقوق الطبع والنشر وحقوق الملكية الفكرية لموقع
+                        GoCarTunisia.tn وجميع محتوياته ملكًا لـ GoCarTunisia.
+                        العناصر الموجودة على موقع GoCarTunisia.tn هي ملك لـ
+                        GoCarTunisia ما لم يتم تحديدها كملك لأطراف ثالثة. اسم
+                        GoCarTunisia وجميع العلامات التجارية والشعارات أو الرسوم
+                        البيانية المعروضة على موقع GoCarTunisia.tn هي علامات
+                        تجارية لـ GoCarTunisia أو شركاتها الفرعية. أسماء الشركات
+                        الأخرى وأسماء المنتجات أو الخدمات المعروضة على الموقع هي
+                        علامات تجارية لأصحابها المعنيين.<br />
+                        لا يُمنح المستخدم أي حقوق أو تراخيص لاستخدام أي علامات
+                        تجارية، ويوافق المستخدم على عدم تعديل أو تأجير أو إقراض
+                        أو بيع أو توزيع أو إنشاء أعمال اشتقاقية بناءً على محتوى
+                        موقع GoCarTunisia.tn و/أو المنتجات والخدمات المعروضة على
+                        موقع GoCarTunisia.tn، كليًا أو جزئيًا. أي استنساخ أو
+                        تمثيل، كليًا أو جزئيًا، للصفحات أو البيانات أو أي عنصر
+                        آخر يشكل الموقع، بأي وسيلة أو وسيلة، دون إذن الناشر،
+                        محظور ويشكل انتهاكًا. يسمح فقط بالنسخ التي تُجرى لأغراض
+                        إعلامية وللاستخدام الخاص الصرف.
+                      </p>
+                    </div>
+
+                    <div class="col-md-6">
+                      <h3>
+                        <span style="font-size: 18px">الروابط التشعبية</span>
+                      </h3>
+
+                      <p>
+                        إنشاء روابط تشعبية إلى موقع
+                        "https://www.GoCarTunisia.tn" يتطلب موافقة مسبقة من
+                        المدير.<br />
+                        الروابط التي تم إنشاؤها من موقع
+                        "https://www.GoCarTunisia.tn" إلى مواقع أخرى لا تُحمّل،
+                        في أي حال، مسؤولية GoCarTunisia بشأن محتواها، أو
+                        المنتجات، أو الخدمات المتاحة على تلك المواقع أو منها.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Starts -->
+    <section id="footer">
+      <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5">
+          <div class="col-md-4 mt-5 mt-md-0">
+            <img src="../../images/logo.png" alt="image" />
+            <p class="py-3">Your road is our passion! 😊</p>
+            <div class="d-flex align-items-center">
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:facebook"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:twitter"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:instagram"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:linkedin"
+                ></iconify-icon
+              ></a>
+              <a href="#" target="_blank"
+                ><iconify-icon
+                  class="social-link-icon pe-4"
+                  icon="mdi:youtube"
+                ></iconify-icon
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-7 offset-md-1 mt-5">
+            <ul class="footer-nav list-unstyled">
+              <li class="nav-item me-2 mb-3">
+                <a
+                  class="nav-link px-4"
+                  aria-current="page"
+                  href="./من نحن.html"
+                  >نبذة عنا</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="#">الشروط والأحكام</a>
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./الشروط القانونية.html"
+                  >الشروط القانونية</a
+                >
+              </li>
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./ميثاق الجودة.html"
+                  >ميثاق الجودة</a
+                >
+              </li>
+
+              <li class="nav-item me-2 mb-3">
+                <a class="nav-link px-4" href="./الاتصال.html">الاتصال</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center border-top"
+      ></footer>
+
+      <div class="container">
+        <footer class="">
+          <div class="col-12 text-center p-3">
+            <p>© 2023-2024 GoCarTunisia - All rights reserved</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="../../js/plugins.js"></script>
+    <script src="../../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  </body>
+</html>
