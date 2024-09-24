@@ -226,8 +226,21 @@ Index page style start
 nav.navbar {
   background: var(--white-color);
   z-index: 9999999;
+  
 }
+.navbar-brand{
+  width: 200px;
+  height: 62px;
+}
+.navbar-brand img {
+  width: 100%;
+  /* L'image prendra toute la largeur du parent */
+  height: auto;
+  /* Conserve le ratio de l'image */
+  display: block;
+  /* Enlève tout espace blanc supplémentaire en bas de l'image */
 
+}
 a.nav-link,
 .nav-button {
   color: var(--body-text-color);
@@ -235,6 +248,7 @@ a.nav-link,
   font-family: var(--body-font);
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  
 }
 
 a.nav-link::after {
